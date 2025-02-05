@@ -16,5 +16,10 @@ namespace Bajoelvelo_v1
         {
             InitializeComponent();
         }
+
+        private void siticoneCustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
