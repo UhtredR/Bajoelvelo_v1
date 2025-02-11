@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace Bajoelvelo_v1
 {
-    public partial class frmMainmenu : Form
+    public partial class frmHelp : Form
     {
-        public frmMainmenu()
+        public frmHelp()
         {
             InitializeComponent();
         }
-
-        private void sbtnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void frmMainmenu_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

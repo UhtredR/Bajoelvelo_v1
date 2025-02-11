@@ -21,5 +21,12 @@ namespace Bajoelvelo_v1
         {
 
         }
+
+        private void siticoneButton1_Click(object sender, EventArgs e)
+        {
+            frmMainmenu frm = new frmMainmenu();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

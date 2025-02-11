@@ -55,16 +55,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogo.Designer.cs">
+      <DependentUpon>frmCatalogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainmenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMainmenu.Designer.cs">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServices.Designer.cs">
+      <DependentUpon>frmServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainmenu.resx">
+      <DependentUpon>frmMainmenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ICONS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
