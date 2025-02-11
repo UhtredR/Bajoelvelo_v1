@@ -16,5 +16,10 @@ namespace Bajoelvelo_v1
         {
             InitializeComponent();
         }
+
+        private void sBtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

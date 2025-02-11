@@ -19,7 +19,16 @@ namespace Bajoelvelo_v1
 
         private void sbtnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult res;
+            res = MessageBox.Show("Deseas cerrar el programa", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                this.Show();
+            }
         }
 
         private void frmMainmenu_Load(object sender, EventArgs e)
@@ -30,6 +39,25 @@ namespace Bajoelvelo_v1
         private void sBtnMinimizar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void sbtnCatalogo_Click(object sender, EventArgs e)
+        {
+            frmCatalogo frmCatalogo = new frmCatalogo();
+            frmCatalogo.Show();
+
+        }
+
+        private void sbtnServicios_Click(object sender, EventArgs e)
+        {
+            frmServices frmServices = new frmServices();
+            frmServices.Show();
+        }
+
+        private void sbtnAyuda_Click(object sender, EventArgs e)
+        {
+            frmHelp frmHelp = new frmHelp();
+            frmHelp.Show();
         }
     }
 }

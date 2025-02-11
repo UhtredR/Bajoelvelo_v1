@@ -135,6 +135,7 @@
             this.sbtnAyuda.Size = new System.Drawing.Size(141, 45);
             this.sbtnAyuda.TabIndex = 2;
             this.sbtnAyuda.Text = "Ayuda";
+            this.sbtnAyuda.Click += new System.EventHandler(this.sbtnAyuda_Click);
             // 
             // sbtnServicios
             // 
@@ -152,6 +153,7 @@
             this.sbtnServicios.Size = new System.Drawing.Size(141, 45);
             this.sbtnServicios.TabIndex = 2;
             this.sbtnServicios.Text = "Servicios";
+            this.sbtnServicios.Click += new System.EventHandler(this.sbtnServicios_Click);
             // 
             // sbtnCatalogo
             // 
@@ -169,6 +171,7 @@
             this.sbtnCatalogo.Size = new System.Drawing.Size(141, 45);
             this.sbtnCatalogo.TabIndex = 2;
             this.sbtnCatalogo.Text = "Catalogo";
+            this.sbtnCatalogo.Click += new System.EventHandler(this.sbtnCatalogo_Click);
             // 
             // sbtnInicio
             // 
