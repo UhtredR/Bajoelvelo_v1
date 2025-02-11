@@ -135,7 +135,6 @@
             this.sbtnAyuda.Size = new System.Drawing.Size(141, 45);
             this.sbtnAyuda.TabIndex = 2;
             this.sbtnAyuda.Text = "Ayuda";
-            this.sbtnAyuda.Click += new System.EventHandler(this.sbtnAyuda_Click);
             // 
             // sbtnServicios
             // 

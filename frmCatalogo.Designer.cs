@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage4 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage5 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage6 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage10 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage11 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
+            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage12 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatalogo));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
@@ -71,7 +71,7 @@
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMaximizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnCerrar);
             this.siticoneGradientPanel1.Controls.Add(this.siticoneHtmlLabel5);
-            this.siticoneGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.siticoneGradientPanel1.FillColor = System.Drawing.Color.MistyRose;
             this.siticoneGradientPanel1.FillColor2 = System.Drawing.Color.White;
             this.siticoneGradientPanel1.Location = new System.Drawing.Point(0, -2);
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
@@ -137,12 +137,12 @@
             // carousel1
             // 
             this.carousel1.HighlightColor = System.Drawing.Color.White;
-            carouselImage4.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage4.ItemImage")));
-            carouselImage5.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage5.ItemImage")));
-            carouselImage6.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage6.ItemImage")));
-            this.carousel1.ImageListCollection.Add(carouselImage4);
-            this.carousel1.ImageListCollection.Add(carouselImage5);
-            this.carousel1.ImageListCollection.Add(carouselImage6);
+            carouselImage10.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage10.ItemImage")));
+            carouselImage11.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage11.ItemImage")));
+            carouselImage12.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage12.ItemImage")));
+            this.carousel1.ImageListCollection.Add(carouselImage10);
+            this.carousel1.ImageListCollection.Add(carouselImage11);
+            this.carousel1.ImageListCollection.Add(carouselImage12);
             this.carousel1.ImageshadeColor = System.Drawing.Color.Black;
             this.carousel1.ImageSlides = true;
             this.carousel1.Location = new System.Drawing.Point(49, 60);
@@ -309,10 +309,10 @@
             // siticoneHtmlLabel5
             // 
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Trebuchet MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneHtmlLabel5.Location = new System.Drawing.Point(12, 14);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
-            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(81, 26);
+            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(101, 31);
             this.siticoneHtmlLabel5.TabIndex = 1;
             this.siticoneHtmlLabel5.Text = "Catalogo";
             // 
