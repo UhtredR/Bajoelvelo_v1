@@ -1,6 +1,6 @@
 ﻿namespace Bajoelvelo_v1
 {
-    partial class Form1
+    partial class frmInicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.siticoneCustomGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
+            this.sbtnSalir = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.srbtnRecordar = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
             this.stxtPass = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtUsuario = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
-            this.sbtnSalir = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneCustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,25 @@
             this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(368, 496);
             this.siticoneCustomGradientPanel1.TabIndex = 0;
             this.siticoneCustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.siticoneCustomGradientPanel1_Paint);
+            // 
+            // sbtnSalir
+            // 
+            this.sbtnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.sbtnSalir.BorderColor = System.Drawing.Color.Transparent;
+            this.sbtnSalir.BorderRadius = 30;
+            this.sbtnSalir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.sbtnSalir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.sbtnSalir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.sbtnSalir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.sbtnSalir.FillColor = System.Drawing.Color.White;
+            this.sbtnSalir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbtnSalir.ForeColor = System.Drawing.Color.Black;
+            this.sbtnSalir.Location = new System.Drawing.Point(110, 318);
+            this.sbtnSalir.Name = "sbtnSalir";
+            this.sbtnSalir.Size = new System.Drawing.Size(148, 55);
+            this.sbtnSalir.TabIndex = 3;
+            this.sbtnSalir.Text = "Salir";
+            this.sbtnSalir.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
             // siticoneButton1
             // 
@@ -157,33 +176,15 @@
             this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneBorderlessForm1.TransparentWhileDrag = true;
             // 
-            // sbtnSalir
-            // 
-            this.sbtnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.sbtnSalir.BorderColor = System.Drawing.Color.Transparent;
-            this.sbtnSalir.BorderRadius = 30;
-            this.sbtnSalir.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.sbtnSalir.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.sbtnSalir.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.sbtnSalir.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.sbtnSalir.FillColor = System.Drawing.Color.White;
-            this.sbtnSalir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbtnSalir.ForeColor = System.Drawing.Color.Black;
-            this.sbtnSalir.Location = new System.Drawing.Point(110, 318);
-            this.sbtnSalir.Name = "sbtnSalir";
-            this.sbtnSalir.Size = new System.Drawing.Size(148, 55);
-            this.sbtnSalir.TabIndex = 3;
-            this.sbtnSalir.Text = "Salir";
-            this.sbtnSalir.Click += new System.EventHandler(this.siticoneButton1_Click);
-            // 
-            // Form1
+            // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(368, 496);
             this.Controls.Add(this.siticoneCustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "frmInicio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.siticoneCustomGradientPanel1.ResumeLayout(false);
             this.siticoneCustomGradientPanel1.PerformLayout();

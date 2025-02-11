@@ -27,5 +27,9 @@ namespace Bajoelvelo_v1
 
         }
 
+        private void sBtnMinimizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

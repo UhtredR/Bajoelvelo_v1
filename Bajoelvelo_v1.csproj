@@ -111,7 +111,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Clases_Func\" />
     <Folder Include="ICONS\" />
+    <Folder Include="Infraestructura\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
