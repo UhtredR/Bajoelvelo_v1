@@ -54,7 +54,7 @@
             // 
             // spanelMenu
             // 
-            this.spanelMenu.BackColor = System.Drawing.Color.MistyRose;
+            this.spanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.spanelMenu.Controls.Add(this.siticonePanel1);
             this.spanelMenu.Controls.Add(this.sbtnSalir);
             this.spanelMenu.Controls.Add(this.sbtnAyuda);
@@ -63,8 +63,9 @@
             this.spanelMenu.Controls.Add(this.sbtnInicio);
             this.spanelMenu.CustomBorderColor = System.Drawing.Color.Transparent;
             this.spanelMenu.Location = new System.Drawing.Point(0, 0);
+            this.spanelMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.spanelMenu.Name = "spanelMenu";
-            this.spanelMenu.Size = new System.Drawing.Size(196, 508);
+            this.spanelMenu.Size = new System.Drawing.Size(392, 977);
             this.spanelMenu.TabIndex = 0;
             // 
             // siticonePanel1
@@ -72,16 +73,18 @@
             this.siticonePanel1.Controls.Add(this.pictureBox1);
             this.siticonePanel1.Controls.Add(this.siticoneButton1);
             this.siticonePanel1.Location = new System.Drawing.Point(0, 0);
+            this.siticonePanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siticonePanel1.Name = "siticonePanel1";
-            this.siticonePanel1.Size = new System.Drawing.Size(196, 104);
+            this.siticonePanel1.Size = new System.Drawing.Size(392, 200);
             this.siticonePanel1.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 98);
+            this.pictureBox1.Size = new System.Drawing.Size(252, 188);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -96,9 +99,10 @@
             this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneButton1.ForeColor = System.Drawing.Color.Black;
             this.siticoneButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneButton1.Image")));
-            this.siticoneButton1.Location = new System.Drawing.Point(147, 3);
+            this.siticoneButton1.Location = new System.Drawing.Point(294, 6);
+            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(40, 39);
+            this.siticoneButton1.Size = new System.Drawing.Size(80, 75);
             this.siticoneButton1.TabIndex = 3;
             // 
             // sbtnSalir
@@ -112,9 +116,10 @@
             this.sbtnSalir.ForeColor = System.Drawing.Color.Black;
             this.sbtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("sbtnSalir.Image")));
             this.sbtnSalir.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.sbtnSalir.Location = new System.Drawing.Point(27, 450);
+            this.sbtnSalir.Location = new System.Drawing.Point(54, 865);
+            this.sbtnSalir.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sbtnSalir.Name = "sbtnSalir";
-            this.sbtnSalir.Size = new System.Drawing.Size(113, 45);
+            this.sbtnSalir.Size = new System.Drawing.Size(226, 87);
             this.sbtnSalir.TabIndex = 2;
             this.sbtnSalir.Text = "Salir";
             this.sbtnSalir.Click += new System.EventHandler(this.sbtnSalir_Click);
@@ -130,9 +135,10 @@
             this.sbtnAyuda.ForeColor = System.Drawing.Color.Black;
             this.sbtnAyuda.Image = ((System.Drawing.Image)(resources.GetObject("sbtnAyuda.Image")));
             this.sbtnAyuda.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.sbtnAyuda.Location = new System.Drawing.Point(27, 225);
+            this.sbtnAyuda.Location = new System.Drawing.Point(54, 433);
+            this.sbtnAyuda.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sbtnAyuda.Name = "sbtnAyuda";
-            this.sbtnAyuda.Size = new System.Drawing.Size(141, 45);
+            this.sbtnAyuda.Size = new System.Drawing.Size(282, 87);
             this.sbtnAyuda.TabIndex = 2;
             this.sbtnAyuda.Text = "Ayuda";
             // 
@@ -147,9 +153,10 @@
             this.sbtnServicios.ForeColor = System.Drawing.Color.Black;
             this.sbtnServicios.Image = ((System.Drawing.Image)(resources.GetObject("sbtnServicios.Image")));
             this.sbtnServicios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.sbtnServicios.Location = new System.Drawing.Point(27, 184);
+            this.sbtnServicios.Location = new System.Drawing.Point(54, 354);
+            this.sbtnServicios.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sbtnServicios.Name = "sbtnServicios";
-            this.sbtnServicios.Size = new System.Drawing.Size(141, 45);
+            this.sbtnServicios.Size = new System.Drawing.Size(282, 87);
             this.sbtnServicios.TabIndex = 2;
             this.sbtnServicios.Text = "Servicios";
             this.sbtnServicios.Click += new System.EventHandler(this.sbtnServicios_Click);
@@ -165,9 +172,10 @@
             this.sbtnCatalogo.ForeColor = System.Drawing.Color.Black;
             this.sbtnCatalogo.Image = ((System.Drawing.Image)(resources.GetObject("sbtnCatalogo.Image")));
             this.sbtnCatalogo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.sbtnCatalogo.Location = new System.Drawing.Point(27, 143);
+            this.sbtnCatalogo.Location = new System.Drawing.Point(54, 275);
+            this.sbtnCatalogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sbtnCatalogo.Name = "sbtnCatalogo";
-            this.sbtnCatalogo.Size = new System.Drawing.Size(141, 45);
+            this.sbtnCatalogo.Size = new System.Drawing.Size(282, 87);
             this.sbtnCatalogo.TabIndex = 2;
             this.sbtnCatalogo.Text = "Catalogo";
             this.sbtnCatalogo.Click += new System.EventHandler(this.sbtnCatalogo_Click);
@@ -183,9 +191,10 @@
             this.sbtnInicio.ForeColor = System.Drawing.Color.Black;
             this.sbtnInicio.Image = ((System.Drawing.Image)(resources.GetObject("sbtnInicio.Image")));
             this.sbtnInicio.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.sbtnInicio.Location = new System.Drawing.Point(27, 101);
+            this.sbtnInicio.Location = new System.Drawing.Point(54, 194);
+            this.sbtnInicio.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sbtnInicio.Name = "sbtnInicio";
-            this.sbtnInicio.Size = new System.Drawing.Size(141, 45);
+            this.sbtnInicio.Size = new System.Drawing.Size(282, 87);
             this.sbtnInicio.TabIndex = 2;
             this.sbtnInicio.Text = "Inicio";
             // 
@@ -196,9 +205,10 @@
             this.spanelTitulo.Controls.Add(this.sBtnMaximizar);
             this.spanelTitulo.Controls.Add(this.sBtnCerrar);
             this.spanelTitulo.Controls.Add(this.Label);
-            this.spanelTitulo.Location = new System.Drawing.Point(196, 0);
+            this.spanelTitulo.Location = new System.Drawing.Point(392, 0);
+            this.spanelTitulo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.spanelTitulo.Name = "spanelTitulo";
-            this.spanelTitulo.Size = new System.Drawing.Size(640, 42);
+            this.spanelTitulo.Size = new System.Drawing.Size(1280, 81);
             this.spanelTitulo.TabIndex = 1;
             // 
             // sBtnMinimizar
@@ -211,9 +221,10 @@
             this.sBtnMinimizar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sBtnMinimizar.ForeColor = System.Drawing.Color.White;
             this.sBtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("sBtnMinimizar.Image")));
-            this.sBtnMinimizar.Location = new System.Drawing.Point(515, 0);
+            this.sBtnMinimizar.Location = new System.Drawing.Point(1030, 0);
+            this.sBtnMinimizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sBtnMinimizar.Name = "sBtnMinimizar";
-            this.sBtnMinimizar.Size = new System.Drawing.Size(43, 21);
+            this.sBtnMinimizar.Size = new System.Drawing.Size(86, 40);
             this.sBtnMinimizar.TabIndex = 2;
             this.sBtnMinimizar.Click += new System.EventHandler(this.sBtnMinimizar_Click);
             // 
@@ -227,9 +238,10 @@
             this.sBtnMaximizar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sBtnMaximizar.ForeColor = System.Drawing.Color.White;
             this.sBtnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("sBtnMaximizar.Image")));
-            this.sBtnMaximizar.Location = new System.Drawing.Point(554, 0);
+            this.sBtnMaximizar.Location = new System.Drawing.Point(1108, 0);
+            this.sBtnMaximizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sBtnMaximizar.Name = "sBtnMaximizar";
-            this.sBtnMaximizar.Size = new System.Drawing.Size(43, 21);
+            this.sBtnMaximizar.Size = new System.Drawing.Size(86, 40);
             this.sBtnMaximizar.TabIndex = 2;
             // 
             // sBtnCerrar
@@ -242,9 +254,10 @@
             this.sBtnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sBtnCerrar.ForeColor = System.Drawing.Color.White;
             this.sBtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("sBtnCerrar.Image")));
-            this.sBtnCerrar.Location = new System.Drawing.Point(597, 0);
+            this.sBtnCerrar.Location = new System.Drawing.Point(1194, 0);
+            this.sBtnCerrar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.sBtnCerrar.Name = "sBtnCerrar";
-            this.sBtnCerrar.Size = new System.Drawing.Size(43, 21);
+            this.sBtnCerrar.Size = new System.Drawing.Size(86, 40);
             this.sBtnCerrar.TabIndex = 2;
             // 
             // Label
@@ -252,9 +265,10 @@
             this.Label.BackColor = System.Drawing.Color.Transparent;
             this.Label.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Label.Location = new System.Drawing.Point(6, 3);
+            this.Label.Location = new System.Drawing.Point(12, 6);
+            this.Label.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(105, 29);
+            this.Label.Size = new System.Drawing.Size(207, 54);
             this.Label.TabIndex = 2;
             this.Label.Text = "Dashboard";
             this.Label.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,12 +281,13 @@
             // 
             // frmMainmenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 506);
+            this.ClientSize = new System.Drawing.Size(1670, 973);
             this.Controls.Add(this.spanelTitulo);
             this.Controls.Add(this.spanelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmMainmenu";
             this.Load += new System.EventHandler(this.frmMainmenu_Load);
             this.spanelMenu.ResumeLayout(false);
