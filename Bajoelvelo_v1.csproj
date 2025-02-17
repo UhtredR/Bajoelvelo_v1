@@ -73,51 +73,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Clases_Func\FormFuncs.cs" />
+    <Compile Include="FORMS\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="FORMS\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCatalogo.cs">
+    <Compile Include="FORMS\frmCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatalogo.Designer.cs">
+    <Compile Include="FORMS\frmCatalogo.Designer.cs">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHelp.cs">
+    <Compile Include="FORMS\frmHelp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHelp.Designer.cs">
+    <Compile Include="FORMS\frmHelp.Designer.cs">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMainmenu.cs">
+    <Compile Include="FORMS\frmMainmenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMainmenu.Designer.cs">
+    <Compile Include="FORMS\frmMainmenu.Designer.cs">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmServices.cs">
+    <Compile Include="FORMS\frmServices.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmServices.Designer.cs">
+    <Compile Include="FORMS\frmServices.Designer.cs">
       <DependentUpon>frmServices.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="FORMS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatalogo.resx">
+    <EmbeddedResource Include="FORMS\frmCatalogo.resx">
       <DependentUpon>frmCatalogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHelp.resx">
+    <EmbeddedResource Include="FORMS\frmHelp.resx">
       <DependentUpon>frmHelp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMainmenu.resx">
+    <EmbeddedResource Include="FORMS\frmMainmenu.resx">
       <DependentUpon>frmMainmenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmServices.resx">
+    <EmbeddedResource Include="FORMS\frmServices.resx">
       <DependentUpon>frmServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -144,7 +145,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Clases_Func\" />
     <Folder Include="ICONS\" />
     <Folder Include="Infraestructura\" />
   </ItemGroup>
