@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Siticone.Desktop.UI.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +17,19 @@ namespace Bajoelvelo_v1
         public frmMainmenu()
         {
             InitializeComponent();
+            this.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
+            this.BackColor = Color.FromArgb(240, 240, 240);
         }
+
+        [DllImport("user32.DLL")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        Clases_Func.FormFuncs formFuncs;
+        
+
 
         private void sbtnSalir_Click(object sender, EventArgs e)
         {
@@ -38,7 +52,8 @@ namespace Bajoelvelo_v1
 
         private void sBtnMinimizar_Click(object sender, EventArgs e)
         {
-
+            formFuncs = new Clases_Func.FormFuncs(this);
+            formFuncs.minimizarForm();
         }
 
         private void sbtnCatalogo_Click(object sender, EventArgs e)
@@ -58,6 +73,35 @@ namespace Bajoelvelo_v1
         {
             frmHelp frmHelp = new frmHelp();
             frmHelp.Show();
+        }
+
+        private void sBtnMaximizar_Click(object sender, EventArgs e)
+        {
+            formFuncs = new Clases_Func.FormFuncs(this);
+            formFuncs.maximizarForm();
+        }
+
+        private void sBtnCerrar_Click(object sender, EventArgs e)
+        {
+            formFuncs = new Clases_Func.FormFuncs(this);
+            formFuncs.cerrarForm();
+        }
+
+        private void spanelTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void frmMainmenu_Resize(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void sBtnMenu_Click(object sender, EventArgs e)
+        {
+            formFuncs = new Clases_Func.FormFuncs(this);
+            formFuncs.OcultarMenu(spanelMenu, (SiticoneButton)sBtnMenu, pictureBox1);
         }
     }
 }

@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.siticoneCustomGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
+            this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.sbtnSalir = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.sBtnAcceder = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.srbtnRecordar = new Siticone.Desktop.UI.WinForms.SiticoneRadioButton();
             this.stxtPass = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtUsuario = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
-            this.siticonePictureBox1 = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
             this.siticoneCustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             this.siticoneCustomGradientPanel1.BackColor = System.Drawing.Color.White;
             this.siticoneCustomGradientPanel1.Controls.Add(this.siticonePictureBox1);
             this.siticoneCustomGradientPanel1.Controls.Add(this.sbtnSalir);
-            this.siticoneCustomGradientPanel1.Controls.Add(this.siticoneButton1);
+            this.siticoneCustomGradientPanel1.Controls.Add(this.sBtnAcceder);
             this.siticoneCustomGradientPanel1.Controls.Add(this.srbtnRecordar);
             this.siticoneCustomGradientPanel1.Controls.Add(this.stxtPass);
             this.siticoneCustomGradientPanel1.Controls.Add(this.stxtUsuario);
@@ -57,12 +57,25 @@
             this.siticoneCustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.siticoneCustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.siticoneCustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.siticoneCustomGradientPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.siticoneCustomGradientPanel1.Name = "siticoneCustomGradientPanel1";
             this.siticoneCustomGradientPanel1.Quality = 50;
-            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(736, 954);
+            this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(368, 496);
             this.siticoneCustomGradientPanel1.TabIndex = 0;
             this.siticoneCustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.siticoneCustomGradientPanel1_Paint);
+            // 
+            // siticonePictureBox1
+            // 
+            this.siticonePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.siticonePictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.siticonePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox1.Image")));
+            this.siticonePictureBox1.ImageRotate = 0F;
+            this.siticonePictureBox1.Location = new System.Drawing.Point(136, 6);
+            this.siticonePictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePictureBox1.Name = "siticonePictureBox1";
+            this.siticonePictureBox1.Size = new System.Drawing.Size(100, 83);
+            this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.siticonePictureBox1.TabIndex = 4;
+            this.siticonePictureBox1.TabStop = false;
             // 
             // sbtnSalir
             // 
@@ -76,33 +89,30 @@
             this.sbtnSalir.FillColor = System.Drawing.Color.White;
             this.sbtnSalir.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbtnSalir.ForeColor = System.Drawing.Color.Black;
-            this.sbtnSalir.Location = new System.Drawing.Point(220, 676);
-            this.sbtnSalir.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.sbtnSalir.Location = new System.Drawing.Point(110, 352);
             this.sbtnSalir.Name = "sbtnSalir";
-            this.sbtnSalir.Size = new System.Drawing.Size(296, 106);
+            this.sbtnSalir.Size = new System.Drawing.Size(148, 55);
             this.sbtnSalir.TabIndex = 3;
             this.sbtnSalir.Text = "Salir";
-            this.sbtnSalir.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
-            // siticoneButton1
+            // sBtnAcceder
             // 
-            this.siticoneButton1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.siticoneButton1.BorderRadius = 30;
-            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton1.FillColor = System.Drawing.Color.White;
-            this.siticoneButton1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneButton1.ForeColor = System.Drawing.Color.Black;
-            this.siticoneButton1.Location = new System.Drawing.Point(220, 558);
-            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(296, 106);
-            this.siticoneButton1.TabIndex = 3;
-            this.siticoneButton1.Text = "Iniciar";
-            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
+            this.sBtnAcceder.BackColor = System.Drawing.Color.Transparent;
+            this.sBtnAcceder.BorderColor = System.Drawing.Color.Transparent;
+            this.sBtnAcceder.BorderRadius = 30;
+            this.sBtnAcceder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.sBtnAcceder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.sBtnAcceder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.sBtnAcceder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.sBtnAcceder.FillColor = System.Drawing.Color.White;
+            this.sBtnAcceder.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sBtnAcceder.ForeColor = System.Drawing.Color.Black;
+            this.sBtnAcceder.Location = new System.Drawing.Point(110, 290);
+            this.sBtnAcceder.Name = "sBtnAcceder";
+            this.sBtnAcceder.Size = new System.Drawing.Size(148, 55);
+            this.sBtnAcceder.TabIndex = 3;
+            this.sBtnAcceder.Text = "Acceder";
+            this.sBtnAcceder.Click += new System.EventHandler(this.sBtnAcceder_Click);
             // 
             // srbtnRecordar
             // 
@@ -114,10 +124,9 @@
             this.srbtnRecordar.CheckedState.InnerColor = System.Drawing.Color.White;
             this.srbtnRecordar.CheckedState.InnerOffset = -4;
             this.srbtnRecordar.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.srbtnRecordar.Location = new System.Drawing.Point(136, 474);
-            this.srbtnRecordar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.srbtnRecordar.Location = new System.Drawing.Point(68, 246);
             this.srbtnRecordar.Name = "srbtnRecordar";
-            this.srbtnRecordar.Size = new System.Drawing.Size(165, 31);
+            this.srbtnRecordar.Size = new System.Drawing.Size(86, 20);
             this.srbtnRecordar.TabIndex = 2;
             this.srbtnRecordar.Text = "Recuerdame";
             this.srbtnRecordar.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -141,14 +150,14 @@
             this.stxtPass.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stxtPass.ForeColor = System.Drawing.Color.Black;
             this.stxtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtPass.Location = new System.Drawing.Point(136, 360);
-            this.stxtPass.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.stxtPass.Location = new System.Drawing.Point(68, 187);
+            this.stxtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.stxtPass.Name = "stxtPass";
             this.stxtPass.PasswordChar = '\0';
             this.stxtPass.PlaceholderForeColor = System.Drawing.Color.Black;
             this.stxtPass.PlaceholderText = "Contrasena";
             this.stxtPass.SelectedText = "";
-            this.stxtPass.Size = new System.Drawing.Size(470, 102);
+            this.stxtPass.Size = new System.Drawing.Size(235, 53);
             this.stxtPass.TabIndex = 1;
             // 
             // stxtUsuario
@@ -166,14 +175,14 @@
             this.stxtUsuario.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stxtUsuario.ForeColor = System.Drawing.Color.Black;
             this.stxtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtUsuario.Location = new System.Drawing.Point(136, 216);
-            this.stxtUsuario.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.stxtUsuario.Location = new System.Drawing.Point(68, 112);
+            this.stxtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.stxtUsuario.Name = "stxtUsuario";
             this.stxtUsuario.PasswordChar = '\0';
             this.stxtUsuario.PlaceholderForeColor = System.Drawing.Color.Black;
             this.stxtUsuario.PlaceholderText = "Usuario";
             this.stxtUsuario.SelectedText = "";
-            this.stxtUsuario.Size = new System.Drawing.Size(470, 102);
+            this.stxtUsuario.Size = new System.Drawing.Size(235, 53);
             this.stxtUsuario.TabIndex = 0;
             // 
             // siticoneBorderlessForm1
@@ -183,27 +192,13 @@
             this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneBorderlessForm1.TransparentWhileDrag = true;
             // 
-            // siticonePictureBox1
-            // 
-            this.siticonePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.siticonePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.siticonePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox1.Image")));
-            this.siticonePictureBox1.ImageRotate = 0F;
-            this.siticonePictureBox1.Location = new System.Drawing.Point(271, 12);
-            this.siticonePictureBox1.Name = "siticonePictureBox1";
-            this.siticonePictureBox1.Size = new System.Drawing.Size(200, 160);
-            this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.siticonePictureBox1.TabIndex = 4;
-            this.siticonePictureBox1.TabStop = false;
-            // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 954);
+            this.ClientSize = new System.Drawing.Size(368, 496);
             this.Controls.Add(this.siticoneCustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -219,7 +214,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtUsuario;
         private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtPass;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton1;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton sBtnAcceder;
         private Siticone.Desktop.UI.WinForms.SiticoneRadioButton srbtnRecordar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnSalir;
         private Siticone.Desktop.UI.WinForms.SiticonePictureBox siticonePictureBox1;
