@@ -70,7 +70,7 @@
             this.siticonePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox1.Image")));
             this.siticonePictureBox1.ImageRotate = 0F;
             this.siticonePictureBox1.Location = new System.Drawing.Point(136, 6);
-            this.siticonePictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticonePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.siticonePictureBox1.Name = "siticonePictureBox1";
             this.siticonePictureBox1.Size = new System.Drawing.Size(100, 83);
             this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +153,7 @@
             this.stxtPass.Location = new System.Drawing.Point(68, 187);
             this.stxtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.stxtPass.Name = "stxtPass";
-            this.stxtPass.PasswordChar = '\0';
+            this.stxtPass.PasswordChar = '*';
             this.stxtPass.PlaceholderForeColor = System.Drawing.Color.Black;
             this.stxtPass.PlaceholderText = "Contrasena";
             this.stxtPass.SelectedText = "";
