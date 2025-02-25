@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases_Func\CargaDG.cs" />
     <Compile Include="Clases_Func\FormFuncs.cs" />
     <Compile Include="FORMS\Form1.cs">
       <SubType>Form</SubType>
@@ -104,6 +105,12 @@
     <Compile Include="FORMS\frmServices.Designer.cs">
       <DependentUpon>frmServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="FORMS\SERV_FORMS\frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\SERV_FORMS\frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Infraestructura\conexion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmServices.resx">
       <DependentUpon>frmServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\SERV_FORMS\frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
