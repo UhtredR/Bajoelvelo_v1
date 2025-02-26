@@ -17,6 +17,7 @@ namespace Bajoelvelo_v1.FORMS.SERV_FORMS
     {
         private readonly SqlConnection cnx;
         private CargaDG cargaDG;
+        private int? idClienteSeleccionado = null;
 
         public frmClientes()
         {
@@ -157,7 +158,7 @@ namespace Bajoelvelo_v1.FORMS.SERV_FORMS
                     var worksheet = workbook.Worksheets.Add("Clientes");
 
                     // Agregar encabezados, omitiendo el ID_Cliente
-                    for (int i = 1; i < dataGridView.Columns.Count; i++) // Comienza desde 1 para omitir la primera columna (ID)
+                    for (int i = 1; i < dataGridView.Columns.Count; i++) 
                     {
                         worksheet.Cell(1, i).Value = dataGridView.Columns[i].HeaderText;
                     }
@@ -165,16 +166,16 @@ namespace Bajoelvelo_v1.FORMS.SERV_FORMS
                     // Agregar filas de datos, omitiendo el ID_Cliente
                     for (int i = 0; i < dataGridView.Rows.Count; i++)
                     {
-                        for (int j = 1; j < dataGridView.Columns.Count; j++) // Comienza desde 1 para omitir la primera columna (ID)
+                        for (int j = 1; j < dataGridView.Columns.Count; j++) 
                         {
                             worksheet.Cell(i + 2, j).Value = dataGridView.Rows[i].Cells[j].Value?.ToString();
                         }
                     }
 
-                    // Ajustar columnas
+                   
                     worksheet.Columns().AdjustToContents();
 
-                    // Guardar el archivo
+                    
                     SaveFileDialog saveFileDialog = new SaveFileDialog
                     {
                         FileName = "Clientes.xlsx",
@@ -193,6 +194,93 @@ namespace Bajoelvelo_v1.FORMS.SERV_FORMS
             {
                 MessageBox.Show("No hay datos para exportar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void sbtnGuardar_Click(object sender, EventArgs e)
+        {
+            
+            string nombre = stxtNombre.Text.Trim();
+            string apellido = stxtApellido.Text.Trim();
+            string direccion = stxtDireccion.Text.Trim();
+            string telefono = stxtTelefono.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellido) || string.IsNullOrWhiteSpace(direccion)
+                || string.IsNullOrWhiteSpace(telefono))
+            {
+                MessageBox.Show("Por favor, completa todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            CargaDG cargaDG = new CargaDG();
+
+            if (cargaDG.GuardarCliente(cnx, nombre, apellido, direccion, telefono))
+            { 
+                MessageBox.Show("Cliente guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargaClientes();
+            }
+
+        }
+
+        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+
+
+        private void sbtnEditar_Click(object sender, EventArgs e)
+        {
+            using (SqlCommand cmd = new SqlCommand("UPDATE Cliente SET Nombre = @Nombre, Apellido = @Apellido, Direccion = @Direccion, Telefono = @Telefono WHERE ID_Cliente = @ID", cnx))
+            {
+                cmd.Parameters.AddWithValue("@Nombre", stxtNombre.Text);
+                cmd.Parameters.AddWithValue("@Apellido", stxtApellido.Text);
+                cmd.Parameters.AddWithValue("@Direccion", stxtDireccion.Text);
+                cmd.Parameters.AddWithValue("@Telefono", stxtTelefono.Text);
+                cmd.Parameters.AddWithValue("@ID", idClienteSeleccionado);
+
+                // Verificar si la conexión está cerrada antes de abrirla
+                if (cnx.State == ConnectionState.Closed)
+                {
+                    cnx.Open();
+                }
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+                cnx.Close();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Cliente actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargaClientes(); 
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo actualizar el cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dgClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgClientes.SelectedRows.Count > 0)
+            {
+                DataGridViewRow filaSeleccionada = dgClientes.SelectedRows[0];
+
+                // Obtener el ID del cliente
+                idClienteSeleccionado = Convert.ToInt32(filaSeleccionada.Cells["ID_Cliente"].Value);
+
+                // Cargar los datos en los TextBox
+                stxtNombre.Text = filaSeleccionada.Cells["Nombre"].Value.ToString();
+                stxtApellido.Text = filaSeleccionada.Cells["Apellido"].Value.ToString();
+                stxtDireccion.Text = filaSeleccionada.Cells["Direccion"].Value.ToString();
+                stxtTelefono.Text = filaSeleccionada.Cells["Telefono"].Value.ToString();
+            }
+        }
+
+        private void sbtnNuevo_Click(object sender, EventArgs e)
+        {
+            stxtNombre.Clear();
+            stxtApellido.Clear();
+            stxtDireccion.Clear();
+            stxtTelefono.Clear();
         }
     }
 }
