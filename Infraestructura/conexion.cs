@@ -11,7 +11,7 @@ namespace Bajoelvelo_v1.Infraestructura
     {
         public static SqlConnection Conectar()
         {
-            string cadenaConexion = "Data Source=DESKTOP-1II6R26\\SQLEXPRESS04;Initial Catalog=bajoelvelo;Integrated Security=True;";
+            string cadenaConexion = "";
             SqlConnection cnx = new SqlConnection(cadenaConexion);
             return cnx;
         }
