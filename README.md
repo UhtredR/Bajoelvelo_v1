@@ -60,3 +60,5 @@ Abre el proyecto en Visual Studio.
 Configura la conexión a la base de datos en appsettings.json o en la clase de conexión.
 Configura la integración con Google Cloud para el almacenamiento de datos.
 Ejecuta la aplicación y comienza a gestionar alquileres.
+
+NOTA: Este proyecto fue creados a fines educativos
