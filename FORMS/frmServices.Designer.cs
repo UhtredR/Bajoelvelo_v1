@@ -410,6 +410,7 @@
             this.siticoneImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.siticoneImageButton1.Size = new System.Drawing.Size(64, 54);
             this.siticoneImageButton1.TabIndex = 5;
+            this.siticoneImageButton1.Click += new System.EventHandler(this.siticoneImageButton1_Click);
             // 
             // label2
             // 

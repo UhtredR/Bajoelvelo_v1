@@ -101,7 +101,6 @@ namespace Bajoelvelo_v1
         private void sBtnMenu_Click(object sender, EventArgs e)
         {
             formFuncs = new Clases_Func.FormFuncs(this);
-            formFuncs.OcultarMenu(spanelMenu, (SiticoneButton)sBtnMenu, pictureBox1);
         }
     }
 }

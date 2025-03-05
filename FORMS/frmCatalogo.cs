@@ -21,5 +21,15 @@ namespace Bajoelvelo_v1
         {
             this.Hide();
         }
+
+        private void tpageConsultas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

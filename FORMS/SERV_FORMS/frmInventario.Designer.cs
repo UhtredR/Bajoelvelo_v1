@@ -38,7 +38,7 @@
             this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.stabControlbtn1 = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
             this.tpageConsultas = new System.Windows.Forms.TabPage();
-            this.dgClientes = new System.Windows.Forms.DataGridView();
+            this.dgInventario = new System.Windows.Forms.DataGridView();
             this.sbtnImprimir = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.stxtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.sbtnEliminar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -52,14 +52,15 @@
             this.siticoneHtmlLabel3 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel2 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneHtmlLabel1 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
-            this.stxtTelefono = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.stxtDireccion = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.stxtApellido = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.stxtStock = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.stxtPrecio = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.stxtDescripcion = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtNombre = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.schkDisponible = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
             this.siticoneGradientPanel1.SuspendLayout();
             this.stabControlbtn1.SuspendLayout();
             this.tpageConsultas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,7 +173,7 @@
             // tpageConsultas
             // 
             this.tpageConsultas.BackColor = System.Drawing.Color.Transparent;
-            this.tpageConsultas.Controls.Add(this.dgClientes);
+            this.tpageConsultas.Controls.Add(this.dgInventario);
             this.tpageConsultas.Controls.Add(this.sbtnImprimir);
             this.tpageConsultas.Controls.Add(this.stxtBuscar);
             this.tpageConsultas.Controls.Add(this.sbtnEliminar);
@@ -186,16 +187,17 @@
             this.tpageConsultas.Text = "Consultas";
             this.tpageConsultas.UseWaitCursor = true;
             // 
-            // dgClientes
+            // dgInventario
             // 
-            this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(9, 74);
-            this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(969, 414);
-            this.dgClientes.TabIndex = 7;
-            this.dgClientes.UseWaitCursor = true;
+            this.dgInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgInventario.BackgroundColor = System.Drawing.Color.White;
+            this.dgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgInventario.Location = new System.Drawing.Point(9, 74);
+            this.dgInventario.Name = "dgInventario";
+            this.dgInventario.Size = new System.Drawing.Size(969, 414);
+            this.dgInventario.TabIndex = 7;
+            this.dgInventario.UseWaitCursor = true;
+            this.dgInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgInventario_CellClick);
             // 
             // sbtnImprimir
             // 
@@ -253,6 +255,7 @@
             this.sbtnEliminar.TabIndex = 6;
             this.sbtnEliminar.Text = "Eliminar";
             this.sbtnEliminar.UseWaitCursor = true;
+            this.sbtnEliminar.Click += new System.EventHandler(this.sbtnEliminar_Click);
             // 
             // sbtnBuscar
             // 
@@ -270,9 +273,11 @@
             this.sbtnBuscar.TabIndex = 6;
             this.sbtnBuscar.Text = "Buscar";
             this.sbtnBuscar.UseWaitCursor = true;
+            this.sbtnBuscar.Click += new System.EventHandler(this.sbtnBuscar_Click);
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.schkDisponible);
             this.tabPage2.Controls.Add(this.sbtnNuevo);
             this.tabPage2.Controls.Add(this.siticoneButton4);
             this.tabPage2.Controls.Add(this.sbtnEditar);
@@ -281,9 +286,9 @@
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel3);
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel2);
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel1);
-            this.tabPage2.Controls.Add(this.stxtTelefono);
-            this.tabPage2.Controls.Add(this.stxtDireccion);
-            this.tabPage2.Controls.Add(this.stxtApellido);
+            this.tabPage2.Controls.Add(this.stxtStock);
+            this.tabPage2.Controls.Add(this.stxtPrecio);
+            this.tabPage2.Controls.Add(this.stxtDescripcion);
             this.tabPage2.Controls.Add(this.stxtNombre);
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
             this.tabPage2.Name = "tabPage2";
@@ -304,12 +309,13 @@
             this.sbtnNuevo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.sbtnNuevo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbtnNuevo.ForeColor = System.Drawing.Color.Black;
-            this.sbtnNuevo.Location = new System.Drawing.Point(525, 102);
+            this.sbtnNuevo.Location = new System.Drawing.Point(576, 102);
             this.sbtnNuevo.Name = "sbtnNuevo";
             this.sbtnNuevo.Size = new System.Drawing.Size(157, 42);
             this.sbtnNuevo.TabIndex = 7;
             this.sbtnNuevo.Text = "Nuevo";
             this.sbtnNuevo.UseWaitCursor = true;
+            this.sbtnNuevo.Click += new System.EventHandler(this.sbtnNuevo_Click);
             // 
             // siticoneButton4
             // 
@@ -321,7 +327,7 @@
             this.siticoneButton4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.siticoneButton4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton4.ForeColor = System.Drawing.Color.Black;
-            this.siticoneButton4.Location = new System.Drawing.Point(688, 102);
+            this.siticoneButton4.Location = new System.Drawing.Point(739, 102);
             this.siticoneButton4.Name = "siticoneButton4";
             this.siticoneButton4.Size = new System.Drawing.Size(157, 42);
             this.siticoneButton4.TabIndex = 7;
@@ -338,12 +344,13 @@
             this.sbtnEditar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.sbtnEditar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbtnEditar.ForeColor = System.Drawing.Color.Black;
-            this.sbtnEditar.Location = new System.Drawing.Point(688, 54);
+            this.sbtnEditar.Location = new System.Drawing.Point(739, 54);
             this.sbtnEditar.Name = "sbtnEditar";
             this.sbtnEditar.Size = new System.Drawing.Size(157, 42);
             this.sbtnEditar.TabIndex = 7;
             this.sbtnEditar.Text = "Editar";
             this.sbtnEditar.UseWaitCursor = true;
+            this.sbtnEditar.Click += new System.EventHandler(this.sbtnEditar_Click);
             // 
             // sbtnGuardar
             // 
@@ -355,128 +362,129 @@
             this.sbtnGuardar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.sbtnGuardar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbtnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.sbtnGuardar.Location = new System.Drawing.Point(525, 54);
+            this.sbtnGuardar.Location = new System.Drawing.Point(576, 54);
             this.sbtnGuardar.Name = "sbtnGuardar";
             this.sbtnGuardar.Size = new System.Drawing.Size(157, 42);
             this.sbtnGuardar.TabIndex = 7;
             this.sbtnGuardar.Text = "Guardar";
             this.sbtnGuardar.UseWaitCursor = true;
+            this.sbtnGuardar.Click += new System.EventHandler(this.sbtnGuardar_Click);
             // 
             // siticoneHtmlLabel4
             // 
             this.siticoneHtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel4.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(33, 206);
+            this.siticoneHtmlLabel4.Location = new System.Drawing.Point(83, 206);
             this.siticoneHtmlLabel4.Name = "siticoneHtmlLabel4";
-            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(104, 31);
+            this.siticoneHtmlLabel4.Size = new System.Drawing.Size(64, 31);
             this.siticoneHtmlLabel4.TabIndex = 2;
-            this.siticoneHtmlLabel4.Text = "Telefono";
+            this.siticoneHtmlLabel4.Text = "Stock";
             this.siticoneHtmlLabel4.UseWaitCursor = true;
             // 
             // siticoneHtmlLabel3
             // 
             this.siticoneHtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel3.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel3.Location = new System.Drawing.Point(20, 155);
+            this.siticoneHtmlLabel3.Location = new System.Drawing.Point(73, 155);
             this.siticoneHtmlLabel3.Name = "siticoneHtmlLabel3";
-            this.siticoneHtmlLabel3.Size = new System.Drawing.Size(108, 31);
+            this.siticoneHtmlLabel3.Size = new System.Drawing.Size(74, 31);
             this.siticoneHtmlLabel3.TabIndex = 2;
-            this.siticoneHtmlLabel3.Text = "Direccion";
+            this.siticoneHtmlLabel3.Text = "Precio";
             this.siticoneHtmlLabel3.UseWaitCursor = true;
             // 
             // siticoneHtmlLabel2
             // 
             this.siticoneHtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel2.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(33, 104);
+            this.siticoneHtmlLabel2.Location = new System.Drawing.Point(15, 104);
             this.siticoneHtmlLabel2.Name = "siticoneHtmlLabel2";
-            this.siticoneHtmlLabel2.Size = new System.Drawing.Size(95, 31);
+            this.siticoneHtmlLabel2.Size = new System.Drawing.Size(132, 31);
             this.siticoneHtmlLabel2.TabIndex = 2;
-            this.siticoneHtmlLabel2.Text = "Apellido";
+            this.siticoneHtmlLabel2.Text = "Descripcion";
             this.siticoneHtmlLabel2.UseWaitCursor = true;
             // 
             // siticoneHtmlLabel1
             // 
             this.siticoneHtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(36, 53);
+            this.siticoneHtmlLabel1.Location = new System.Drawing.Point(55, 53);
             this.siticoneHtmlLabel1.Name = "siticoneHtmlLabel1";
             this.siticoneHtmlLabel1.Size = new System.Drawing.Size(92, 31);
             this.siticoneHtmlLabel1.TabIndex = 2;
             this.siticoneHtmlLabel1.Text = "Nombre";
             this.siticoneHtmlLabel1.UseWaitCursor = true;
             // 
-            // stxtTelefono
+            // stxtStock
             // 
-            this.stxtTelefono.AutoRoundedCorners = true;
-            this.stxtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
-            this.stxtTelefono.BorderRadius = 20;
-            this.stxtTelefono.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.stxtTelefono.DefaultText = "";
-            this.stxtTelefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stxtTelefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.stxtTelefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.stxtTelefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.stxtTelefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtTelefono.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stxtTelefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtTelefono.Location = new System.Drawing.Point(134, 206);
-            this.stxtTelefono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.stxtTelefono.Name = "stxtTelefono";
-            this.stxtTelefono.PasswordChar = '\0';
-            this.stxtTelefono.PlaceholderText = "";
-            this.stxtTelefono.SelectedText = "";
-            this.stxtTelefono.Size = new System.Drawing.Size(302, 43);
-            this.stxtTelefono.TabIndex = 0;
-            this.stxtTelefono.UseWaitCursor = true;
+            this.stxtStock.AutoRoundedCorners = true;
+            this.stxtStock.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
+            this.stxtStock.BorderRadius = 20;
+            this.stxtStock.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.stxtStock.DefaultText = "";
+            this.stxtStock.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stxtStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.stxtStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.stxtStock.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.stxtStock.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.stxtStock.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stxtStock.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.stxtStock.Location = new System.Drawing.Point(156, 206);
+            this.stxtStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.stxtStock.Name = "stxtStock";
+            this.stxtStock.PasswordChar = '\0';
+            this.stxtStock.PlaceholderText = "";
+            this.stxtStock.SelectedText = "";
+            this.stxtStock.Size = new System.Drawing.Size(302, 43);
+            this.stxtStock.TabIndex = 0;
+            this.stxtStock.UseWaitCursor = true;
             // 
-            // stxtDireccion
+            // stxtPrecio
             // 
-            this.stxtDireccion.AutoRoundedCorners = true;
-            this.stxtDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
-            this.stxtDireccion.BorderRadius = 20;
-            this.stxtDireccion.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.stxtDireccion.DefaultText = "";
-            this.stxtDireccion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stxtDireccion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.stxtDireccion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.stxtDireccion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.stxtDireccion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtDireccion.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stxtDireccion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtDireccion.Location = new System.Drawing.Point(134, 155);
-            this.stxtDireccion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.stxtDireccion.Name = "stxtDireccion";
-            this.stxtDireccion.PasswordChar = '\0';
-            this.stxtDireccion.PlaceholderText = "";
-            this.stxtDireccion.SelectedText = "";
-            this.stxtDireccion.Size = new System.Drawing.Size(302, 43);
-            this.stxtDireccion.TabIndex = 0;
-            this.stxtDireccion.UseWaitCursor = true;
+            this.stxtPrecio.AutoRoundedCorners = true;
+            this.stxtPrecio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
+            this.stxtPrecio.BorderRadius = 20;
+            this.stxtPrecio.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.stxtPrecio.DefaultText = "";
+            this.stxtPrecio.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stxtPrecio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.stxtPrecio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.stxtPrecio.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.stxtPrecio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.stxtPrecio.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stxtPrecio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.stxtPrecio.Location = new System.Drawing.Point(156, 155);
+            this.stxtPrecio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.stxtPrecio.Name = "stxtPrecio";
+            this.stxtPrecio.PasswordChar = '\0';
+            this.stxtPrecio.PlaceholderText = "";
+            this.stxtPrecio.SelectedText = "";
+            this.stxtPrecio.Size = new System.Drawing.Size(302, 43);
+            this.stxtPrecio.TabIndex = 0;
+            this.stxtPrecio.UseWaitCursor = true;
             // 
-            // stxtApellido
+            // stxtDescripcion
             // 
-            this.stxtApellido.AutoRoundedCorners = true;
-            this.stxtApellido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
-            this.stxtApellido.BorderRadius = 20;
-            this.stxtApellido.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.stxtApellido.DefaultText = "";
-            this.stxtApellido.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stxtApellido.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.stxtApellido.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.stxtApellido.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.stxtApellido.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtApellido.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stxtApellido.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtApellido.Location = new System.Drawing.Point(134, 104);
-            this.stxtApellido.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.stxtApellido.Name = "stxtApellido";
-            this.stxtApellido.PasswordChar = '\0';
-            this.stxtApellido.PlaceholderText = "";
-            this.stxtApellido.SelectedText = "";
-            this.stxtApellido.Size = new System.Drawing.Size(302, 43);
-            this.stxtApellido.TabIndex = 0;
-            this.stxtApellido.UseWaitCursor = true;
+            this.stxtDescripcion.AutoRoundedCorners = true;
+            this.stxtDescripcion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
+            this.stxtDescripcion.BorderRadius = 20;
+            this.stxtDescripcion.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.stxtDescripcion.DefaultText = "";
+            this.stxtDescripcion.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stxtDescripcion.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.stxtDescripcion.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.stxtDescripcion.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.stxtDescripcion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.stxtDescripcion.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stxtDescripcion.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.stxtDescripcion.Location = new System.Drawing.Point(156, 104);
+            this.stxtDescripcion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.stxtDescripcion.Name = "stxtDescripcion";
+            this.stxtDescripcion.PasswordChar = '\0';
+            this.stxtDescripcion.PlaceholderText = "";
+            this.stxtDescripcion.SelectedText = "";
+            this.stxtDescripcion.Size = new System.Drawing.Size(302, 43);
+            this.stxtDescripcion.TabIndex = 0;
+            this.stxtDescripcion.UseWaitCursor = true;
             // 
             // stxtNombre
             // 
@@ -492,7 +500,7 @@
             this.stxtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.stxtNombre.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stxtNombre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.stxtNombre.Location = new System.Drawing.Point(134, 53);
+            this.stxtNombre.Location = new System.Drawing.Point(156, 53);
             this.stxtNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.stxtNombre.Name = "stxtNombre";
             this.stxtNombre.PasswordChar = '\0';
@@ -501,6 +509,23 @@
             this.stxtNombre.Size = new System.Drawing.Size(302, 43);
             this.stxtNombre.TabIndex = 0;
             this.stxtNombre.UseWaitCursor = true;
+            // 
+            // schkDisponible
+            // 
+            this.schkDisponible.AutoSize = true;
+            this.schkDisponible.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.schkDisponible.CheckedState.BorderRadius = 0;
+            this.schkDisponible.CheckedState.BorderThickness = 0;
+            this.schkDisponible.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.schkDisponible.Location = new System.Drawing.Point(156, 256);
+            this.schkDisponible.Name = "schkDisponible";
+            this.schkDisponible.Size = new System.Drawing.Size(134, 26);
+            this.schkDisponible.TabIndex = 8;
+            this.schkDisponible.Text = "Disponibilidad";
+            this.schkDisponible.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.schkDisponible.UncheckedState.BorderRadius = 0;
+            this.schkDisponible.UncheckedState.BorderThickness = 0;
+            this.schkDisponible.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // frmInventario
             // 
@@ -512,11 +537,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventario";
             this.Text = "frmInventario";
+            this.Load += new System.EventHandler(this.frmInventario_Load);
             this.siticoneGradientPanel1.ResumeLayout(false);
             this.siticoneGradientPanel1.PerformLayout();
             this.stabControlbtn1.ResumeLayout(false);
             this.tpageConsultas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
@@ -533,7 +559,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel5;
         private Siticone.Desktop.UI.WinForms.SiticoneTabControl stabControlbtn1;
         private System.Windows.Forms.TabPage tpageConsultas;
-        private System.Windows.Forms.DataGridView dgClientes;
+        private System.Windows.Forms.DataGridView dgInventario;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnImprimir;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtBuscar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnEliminar;
@@ -547,9 +573,10 @@
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel3;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel2;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel1;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtTelefono;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtDireccion;
-        private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtApellido;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtStock;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtPrecio;
+        private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtDescripcion;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtNombre;
+        private Siticone.Desktop.UI.WinForms.SiticoneCheckBox schkDisponible;
     }
 }

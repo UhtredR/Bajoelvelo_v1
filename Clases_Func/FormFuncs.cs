@@ -38,33 +38,5 @@ namespace Bajoelvelo_v1.Clases_Func
             else
                 formf.WindowState = FormWindowState.Maximized;
         }
-
-        public void OcultarMenu(Panel spanelMenu, SiticoneButton sbtnMenu, PictureBox pictureBox1)
-        {
-            if (spanelMenu.Width > 200)
-            {
-                spanelMenu.Width = 100;
-                pictureBox1.Visible = false;
-                sbtnMenu.Dock = DockStyle.Top;
-                foreach (Button mbutton in spanelMenu.Controls.OfType<Button>())
-                {
-                    mbutton.Text = "";
-                    mbutton.ImageAlign = ContentAlignment.MiddleCenter;
-                    mbutton.Padding = new Padding(0);
-                }
-            }
-            else
-            {
-                spanelMenu.Width = 230;
-                pictureBox1.Visible = true;
-                sbtnMenu.Dock = DockStyle.None;
-                foreach (Button mbutton in spanelMenu.Controls.OfType<Button>())
-                {
-                    mbutton.Text = "     "+ mbutton.Tag.ToString();
-                    mbutton.ImageAlign = ContentAlignment.MiddleCenter;
-                    mbutton.Padding = new Padding(10, 0, 0, 0);
-                }
-            }
-        }
     }
 }

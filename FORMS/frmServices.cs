@@ -28,5 +28,11 @@ namespace Bajoelvelo_v1
             frmClientes frmClientes = new frmClientes();
             frmClientes.Show();
         }
+
+        private void siticoneImageButton1_Click(object sender, EventArgs e)
+        {
+            frmInventario frmInventario = new frmInventario();
+            frmInventario.Show();
+        }
     }
 }

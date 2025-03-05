@@ -223,6 +223,7 @@ namespace Bajoelvelo_v1.FORMS.SERV_FORMS
 
         private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
         }
 
 
