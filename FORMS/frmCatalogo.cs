@@ -227,7 +227,7 @@ namespace Bajoelvelo_v1
                 decimal precioUnitario = Convert.ToDecimal(filas[0]["Precio_unitario"]);
                 int stockDisponible = Convert.ToInt32(filas[0]["Stock"]);
 
-                
+                bool resultado = _factura.AgregarProducto(idProducto, nombreProducto,  precioUnitario, stockDisponible);
 
                 if (!resultado)
                 {
