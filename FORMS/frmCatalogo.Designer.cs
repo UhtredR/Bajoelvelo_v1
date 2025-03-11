@@ -29,12 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage1 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatalogo));
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage2 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage3 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage4 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage5 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,7 +40,6 @@
             this.stabControlbtn1 = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
             this.tpageCatalogo = new System.Windows.Forms.TabPage();
             this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.carousel = new Syncfusion.Windows.Forms.Tools.Carousel();
             this.flProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -214,7 +208,6 @@
             // 
             // siticonePanel6
             // 
-            this.siticonePanel6.Controls.Add(this.carousel);
             this.siticonePanel6.Controls.Add(this.flProductos);
             this.siticonePanel6.Location = new System.Drawing.Point(3, 14);
             this.siticonePanel6.Name = "siticonePanel6";
@@ -223,44 +216,12 @@
             this.siticonePanel6.UseWaitCursor = true;
             this.siticonePanel6.Paint += new System.Windows.Forms.PaintEventHandler(this.siticonePanel6_Paint);
             // 
-            // carousel
-            // 
-            this.carousel.HighlightColor = System.Drawing.Color.Transparent;
-            carouselImage1.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage1.ItemImage")));
-            carouselImage2.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage2.ItemImage")));
-            carouselImage3.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage3.ItemImage")));
-            carouselImage4.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage4.ItemImage")));
-            carouselImage5.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage5.ItemImage")));
-            this.carousel.ImageListCollection.Add(carouselImage1);
-            this.carousel.ImageListCollection.Add(carouselImage2);
-            this.carousel.ImageListCollection.Add(carouselImage3);
-            this.carousel.ImageListCollection.Add(carouselImage4);
-            this.carousel.ImageListCollection.Add(carouselImage5);
-            this.carousel.ImageshadeColor = System.Drawing.Color.Transparent;
-            this.carousel.ImageSlides = true;
-            this.carousel.Location = new System.Drawing.Point(122, 13);
-            this.carousel.Name = "carousel";
-            this.carousel.PadX = 0;
-            this.carousel.PadY = 0;
-            this.carousel.Perspective = 4F;
-            this.carousel.RotateAlways = false;
-            this.carousel.ShowImagePreview = false;
-            this.carousel.ShowImageShadow = false;
-            this.carousel.Size = new System.Drawing.Size(697, 195);
-            this.carousel.TabIndex = 56;
-            this.carousel.Text = "carousel1";
-            this.carousel.ThemeName = "Metro";
-            this.carousel.TouchTransitionSpeed = 1F;
-            this.carousel.UseOriginalImageinPreview = false;
-            this.carousel.UseWaitCursor = true;
-            this.carousel.VisualStyle = Syncfusion.Windows.Forms.Tools.CarouselVisualStyle.Metro;
-            // 
             // flProductos
             // 
             this.flProductos.AutoScroll = true;
-            this.flProductos.Location = new System.Drawing.Point(122, 238);
+            this.flProductos.Location = new System.Drawing.Point(121, 32);
             this.flProductos.Name = "flProductos";
-            this.flProductos.Size = new System.Drawing.Size(697, 498);
+            this.flProductos.Size = new System.Drawing.Size(697, 427);
             this.flProductos.TabIndex = 57;
             this.flProductos.UseWaitCursor = true;
             // 
@@ -573,7 +534,6 @@
         private System.Windows.Forms.DataGridView dgvDetalleFactura;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnAgregarProducto;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel6;
-        private Syncfusion.Windows.Forms.Tools.Carousel carousel;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel7;
         private System.Windows.Forms.Label label12;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox scmbProducto;
