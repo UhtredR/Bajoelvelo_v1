@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientes));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientes));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
             this.sBtnMinimizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -60,12 +60,14 @@
             this.stxtDireccion = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtApellido = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtNombre = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).BeginInit();
             this.stabControlbtn1.SuspendLayout();
             this.tpageConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -77,6 +79,7 @@
             // siticoneGradientPanel1
             // 
             this.siticoneGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneGradientPanel1.Controls.Add(this.pictureBox1);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMinimizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMaximizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnCerrar);
@@ -140,7 +143,7 @@
             // 
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(12, 14);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(61, 12);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(244, 31);
             this.siticoneHtmlLabel5.TabIndex = 1;
@@ -568,6 +571,16 @@
             this.stxtNombre.TabIndex = 0;
             this.stxtNombre.UseWaitCursor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -588,6 +601,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -621,5 +635,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnNuevo;
         private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton4;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnEditar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

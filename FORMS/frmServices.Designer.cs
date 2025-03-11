@@ -32,42 +32,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmServices));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sBtnMinimizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sBtnMaximizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sBtnCerrar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneImageButton5 = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneImageButton6 = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.siticonePanel5 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneImageButton4 = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.siticonePanel4 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneImageButton3 = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.siticonePanel3 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.siticoneImageButton2 = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.siticonePanel2 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticoneImageButton1 = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.siticoneGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.siticonePanel1.SuspendLayout();
-            this.siticonePanel6.SuspendLayout();
             this.siticonePanel7.SuspendLayout();
-            this.siticonePanel5.SuspendLayout();
             this.siticonePanel4.SuspendLayout();
-            this.siticonePanel3.SuspendLayout();
             this.siticonePanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +67,7 @@
             // siticoneGradientPanel1
             // 
             this.siticoneGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneGradientPanel1.Controls.Add(this.pictureBox1);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMinimizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMaximizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnCerrar);
@@ -90,6 +78,16 @@
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
             this.siticoneGradientPanel1.Size = new System.Drawing.Size(962, 54);
             this.siticoneGradientPanel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // sBtnMinimizar
             // 
@@ -141,7 +139,7 @@
             // 
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(12, 14);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(61, 12);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(102, 31);
             this.siticoneHtmlLabel5.TabIndex = 1;
@@ -149,61 +147,13 @@
             // 
             // siticonePanel1
             // 
-            this.siticonePanel1.Controls.Add(this.siticonePanel6);
             this.siticonePanel1.Controls.Add(this.siticonePanel7);
-            this.siticonePanel1.Controls.Add(this.siticonePanel5);
             this.siticonePanel1.Controls.Add(this.siticonePanel4);
-            this.siticonePanel1.Controls.Add(this.siticonePanel3);
             this.siticonePanel1.Controls.Add(this.siticonePanel2);
             this.siticonePanel1.Location = new System.Drawing.Point(12, 77);
             this.siticonePanel1.Name = "siticonePanel1";
             this.siticonePanel1.Size = new System.Drawing.Size(936, 417);
             this.siticonePanel1.TabIndex = 2;
-            // 
-            // siticonePanel6
-            // 
-            this.siticonePanel6.BackColor = System.Drawing.Color.Transparent;
-            this.siticonePanel6.Controls.Add(this.siticoneImageButton5);
-            this.siticonePanel6.Controls.Add(this.label9);
-            this.siticonePanel6.Controls.Add(this.label10);
-            this.siticonePanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
-            this.siticonePanel6.Location = new System.Drawing.Point(630, 129);
-            this.siticonePanel6.Name = "siticonePanel6";
-            this.siticonePanel6.Size = new System.Drawing.Size(293, 79);
-            this.siticonePanel6.TabIndex = 5;
-            // 
-            // siticoneImageButton5
-            // 
-            this.siticoneImageButton5.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton5.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton5.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageButton5.Image")));
-            this.siticoneImageButton5.ImageOffset = new System.Drawing.Point(0, 0);
-            this.siticoneImageButton5.ImageRotate = 0F;
-            this.siticoneImageButton5.Location = new System.Drawing.Point(221, 12);
-            this.siticoneImageButton5.Name = "siticoneImageButton5";
-            this.siticoneImageButton5.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton5.Size = new System.Drawing.Size(64, 54);
-            this.siticoneImageButton5.TabIndex = 5;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 18);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "lorem ipsum\r\n";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(8, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 18);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Inventario";
             // 
             // siticonePanel7
             // 
@@ -224,10 +174,10 @@
             this.siticoneImageButton6.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageButton6.Image")));
             this.siticoneImageButton6.ImageOffset = new System.Drawing.Point(0, 0);
             this.siticoneImageButton6.ImageRotate = 0F;
-            this.siticoneImageButton6.Location = new System.Drawing.Point(221, 12);
+            this.siticoneImageButton6.Location = new System.Drawing.Point(207, 3);
             this.siticoneImageButton6.Name = "siticoneImageButton6";
             this.siticoneImageButton6.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton6.Size = new System.Drawing.Size(64, 54);
+            this.siticoneImageButton6.Size = new System.Drawing.Size(78, 70);
             this.siticoneImageButton6.TabIndex = 5;
             this.siticoneImageButton6.Click += new System.EventHandler(this.siticoneImageButton6_Click);
             // 
@@ -251,51 +201,6 @@
             this.label12.TabIndex = 3;
             this.label12.Text = "Clientes";
             // 
-            // siticonePanel5
-            // 
-            this.siticonePanel5.BackColor = System.Drawing.Color.Transparent;
-            this.siticonePanel5.Controls.Add(this.siticoneImageButton4);
-            this.siticonePanel5.Controls.Add(this.label7);
-            this.siticonePanel5.Controls.Add(this.label8);
-            this.siticonePanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
-            this.siticonePanel5.Location = new System.Drawing.Point(327, 129);
-            this.siticonePanel5.Name = "siticonePanel5";
-            this.siticonePanel5.Size = new System.Drawing.Size(293, 79);
-            this.siticonePanel5.TabIndex = 3;
-            // 
-            // siticoneImageButton4
-            // 
-            this.siticoneImageButton4.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton4.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton4.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageButton4.Image")));
-            this.siticoneImageButton4.ImageOffset = new System.Drawing.Point(0, 0);
-            this.siticoneImageButton4.ImageRotate = 0F;
-            this.siticoneImageButton4.Location = new System.Drawing.Point(221, 12);
-            this.siticoneImageButton4.Name = "siticoneImageButton4";
-            this.siticoneImageButton4.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton4.Size = new System.Drawing.Size(64, 54);
-            this.siticoneImageButton4.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 27);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 18);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "lorem ipsum\r\n";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(8, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 18);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Inventario";
-            // 
             // siticonePanel4
             // 
             this.siticonePanel4.BackColor = System.Drawing.Color.Transparent;
@@ -315,11 +220,12 @@
             this.siticoneImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageButton3.Image")));
             this.siticoneImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
             this.siticoneImageButton3.ImageRotate = 0F;
-            this.siticoneImageButton3.Location = new System.Drawing.Point(221, 12);
+            this.siticoneImageButton3.Location = new System.Drawing.Point(197, 6);
             this.siticoneImageButton3.Name = "siticoneImageButton3";
             this.siticoneImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton3.Size = new System.Drawing.Size(64, 54);
+            this.siticoneImageButton3.Size = new System.Drawing.Size(88, 67);
             this.siticoneImageButton3.TabIndex = 5;
+            this.siticoneImageButton3.Click += new System.EventHandler(this.siticoneImageButton3_Click);
             // 
             // label5
             // 
@@ -341,51 +247,6 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Facturas";
             // 
-            // siticonePanel3
-            // 
-            this.siticonePanel3.BackColor = System.Drawing.Color.Transparent;
-            this.siticonePanel3.Controls.Add(this.siticoneImageButton2);
-            this.siticonePanel3.Controls.Add(this.label3);
-            this.siticonePanel3.Controls.Add(this.label4);
-            this.siticonePanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
-            this.siticonePanel3.Location = new System.Drawing.Point(9, 129);
-            this.siticonePanel3.Name = "siticonePanel3";
-            this.siticonePanel3.Size = new System.Drawing.Size(293, 79);
-            this.siticonePanel3.TabIndex = 1;
-            // 
-            // siticoneImageButton2
-            // 
-            this.siticoneImageButton2.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton2.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageButton2.Image")));
-            this.siticoneImageButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.siticoneImageButton2.ImageRotate = 0F;
-            this.siticoneImageButton2.Location = new System.Drawing.Point(221, 12);
-            this.siticoneImageButton2.Name = "siticoneImageButton2";
-            this.siticoneImageButton2.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton2.Size = new System.Drawing.Size(64, 54);
-            this.siticoneImageButton2.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 36);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "loremp ipsum\r\n\r\n";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Inventario";
-            // 
             // siticonePanel2
             // 
             this.siticonePanel2.BackColor = System.Drawing.Color.Transparent;
@@ -405,10 +266,10 @@
             this.siticoneImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneImageButton1.Image")));
             this.siticoneImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.siticoneImageButton1.ImageRotate = 0F;
-            this.siticoneImageButton1.Location = new System.Drawing.Point(221, 12);
+            this.siticoneImageButton1.Location = new System.Drawing.Point(208, 12);
             this.siticoneImageButton1.Name = "siticoneImageButton1";
             this.siticoneImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.siticoneImageButton1.Size = new System.Drawing.Size(64, 54);
+            this.siticoneImageButton1.Size = new System.Drawing.Size(77, 54);
             this.siticoneImageButton1.TabIndex = 5;
             this.siticoneImageButton1.Click += new System.EventHandler(this.siticoneImageButton1_Click);
             // 
@@ -444,17 +305,12 @@
             this.Text = "frmServices";
             this.siticoneGradientPanel1.ResumeLayout(false);
             this.siticoneGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.siticonePanel1.ResumeLayout(false);
-            this.siticonePanel6.ResumeLayout(false);
-            this.siticonePanel6.PerformLayout();
             this.siticonePanel7.ResumeLayout(false);
             this.siticonePanel7.PerformLayout();
-            this.siticonePanel5.ResumeLayout(false);
-            this.siticonePanel5.PerformLayout();
             this.siticonePanel4.ResumeLayout(false);
             this.siticonePanel4.PerformLayout();
-            this.siticonePanel3.ResumeLayout(false);
-            this.siticonePanel3.PerformLayout();
             this.siticonePanel2.ResumeLayout(false);
             this.siticonePanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -472,27 +328,16 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel2;
         private System.Windows.Forms.Label label1;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel5;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton siticoneImageButton4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel4;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton siticoneImageButton3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel3;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton siticoneImageButton2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton siticoneImageButton1;
         private System.Windows.Forms.Label label2;
-        private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel6;
-        private Siticone.Desktop.UI.WinForms.SiticoneImageButton siticoneImageButton5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel7;
         private Siticone.Desktop.UI.WinForms.SiticoneImageButton siticoneImageButton6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

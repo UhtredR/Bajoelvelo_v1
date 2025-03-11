@@ -37,14 +37,16 @@
             this.sBtnCerrar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneCustomGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel();
-            this.dgClientes = new System.Windows.Forms.DataGridView();
+            this.dgFacturas = new System.Windows.Forms.DataGridView();
             this.sbtnImprimir = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.stxtBuscar = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.sbtnEliminar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sbtnBuscar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneGradientPanel1.SuspendLayout();
             this.siticoneCustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -56,6 +58,7 @@
             // siticoneGradientPanel1
             // 
             this.siticoneGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneGradientPanel1.Controls.Add(this.pictureBox1);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMinimizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMaximizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnCerrar);
@@ -66,7 +69,6 @@
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
             this.siticoneGradientPanel1.Size = new System.Drawing.Size(962, 54);
             this.siticoneGradientPanel1.TabIndex = 2;
-            this.siticoneGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.siticoneGradientPanel1_Paint);
             // 
             // sBtnMinimizar
             // 
@@ -117,7 +119,7 @@
             // 
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(12, 14);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(62, 12);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(249, 31);
             this.siticoneHtmlLabel5.TabIndex = 1;
@@ -125,7 +127,7 @@
             // 
             // siticoneCustomGradientPanel1
             // 
-            this.siticoneCustomGradientPanel1.Controls.Add(this.dgClientes);
+            this.siticoneCustomGradientPanel1.Controls.Add(this.dgFacturas);
             this.siticoneCustomGradientPanel1.Controls.Add(this.sbtnImprimir);
             this.siticoneCustomGradientPanel1.Controls.Add(this.stxtBuscar);
             this.siticoneCustomGradientPanel1.Controls.Add(this.sbtnEliminar);
@@ -137,16 +139,16 @@
             this.siticoneCustomGradientPanel1.Size = new System.Drawing.Size(959, 564);
             this.siticoneCustomGradientPanel1.TabIndex = 3;
             // 
-            // dgClientes
+            // dgFacturas
             // 
-            this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(3, 129);
-            this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(953, 423);
-            this.dgClientes.TabIndex = 12;
-            this.dgClientes.UseWaitCursor = true;
+            this.dgFacturas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgFacturas.BackgroundColor = System.Drawing.Color.White;
+            this.dgFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgFacturas.Location = new System.Drawing.Point(3, 129);
+            this.dgFacturas.Name = "dgFacturas";
+            this.dgFacturas.Size = new System.Drawing.Size(953, 423);
+            this.dgFacturas.TabIndex = 12;
+            this.dgFacturas.UseWaitCursor = true;
             // 
             // sbtnImprimir
             // 
@@ -164,6 +166,7 @@
             this.sbtnImprimir.TabIndex = 9;
             this.sbtnImprimir.Text = "Imprimir";
             this.sbtnImprimir.UseWaitCursor = true;
+            this.sbtnImprimir.Click += new System.EventHandler(this.sbtnImprimir_Click_1);
             // 
             // stxtBuscar
             // 
@@ -204,6 +207,7 @@
             this.sbtnEliminar.TabIndex = 10;
             this.sbtnEliminar.Text = "Eliminar";
             this.sbtnEliminar.UseWaitCursor = true;
+            this.sbtnEliminar.Click += new System.EventHandler(this.sbtnEliminar_Click_1);
             // 
             // sbtnBuscar
             // 
@@ -221,6 +225,17 @@
             this.sbtnBuscar.TabIndex = 11;
             this.sbtnBuscar.Text = "Buscar";
             this.sbtnBuscar.UseWaitCursor = true;
+            this.sbtnBuscar.Click += new System.EventHandler(this.sbtnBuscar_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // frmFactura
             // 
@@ -234,7 +249,8 @@
             this.siticoneGradientPanel1.ResumeLayout(false);
             this.siticoneGradientPanel1.PerformLayout();
             this.siticoneCustomGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,10 +264,11 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton sBtnCerrar;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel5;
         private Siticone.Desktop.UI.WinForms.SiticoneCustomGradientPanel siticoneCustomGradientPanel1;
-        private System.Windows.Forms.DataGridView dgClientes;
+        private System.Windows.Forms.DataGridView dgFacturas;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnImprimir;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtBuscar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnEliminar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnBuscar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(1097, 588);
             this.Name = "frmAlmacen";
             this.Text = "frmAlmacen";
+            this.Load += new System.EventHandler(this.frmAlmacen_Load);
             this.ResumeLayout(false);
 
         }

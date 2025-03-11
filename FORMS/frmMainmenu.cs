@@ -58,8 +58,8 @@ namespace Bajoelvelo_v1
 
         private void sbtnCatalogo_Click(object sender, EventArgs e)
         {
-            frmCatalogo frmCatalogo = new frmCatalogo();
-            frmCatalogo.Show();
+            frmCatalogo catalogo = new frmCatalogo();
+            catalogo.Show();
 
         }
 

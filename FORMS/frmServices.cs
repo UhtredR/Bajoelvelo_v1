@@ -1,4 +1,5 @@
-﻿using Bajoelvelo_v1.FORMS.SERV_FORMS;
+﻿using Bajoelvelo_v1.FORMS;
+using Bajoelvelo_v1.FORMS.SERV_FORMS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,10 @@ namespace Bajoelvelo_v1
 
         private void sBtnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+            this.Hide();
+            frmMainmenu frmMainmenu = new frmMainmenu();
+            frmMainmenu.Show();
         }
 
         private void siticoneImageButton6_Click(object sender, EventArgs e)
@@ -33,6 +37,12 @@ namespace Bajoelvelo_v1
         {
             frmInventario frmInventario = new frmInventario();
             frmInventario.Show();
+        }
+
+        private void siticoneImageButton3_Click(object sender, EventArgs e)
+        {
+            frmFactura frmFactura = new frmFactura();
+            frmFactura.Show();
         }
     }
 }

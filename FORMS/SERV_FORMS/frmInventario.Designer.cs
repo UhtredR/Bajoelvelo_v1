@@ -44,8 +44,9 @@
             this.sbtnEliminar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sbtnBuscar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.sbtnNuevo = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.siticoneButton4 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.spbProducto = new Siticone.Desktop.UI.WinForms.SiticonePictureBox();
+            this.schkDisponible = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
+            this.sbtnSeleccionar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sbtnEditar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sbtnGuardar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel4 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
@@ -56,12 +57,14 @@
             this.stxtPrecio = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtDescripcion = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtNombre = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.schkDisponible = new Siticone.Desktop.UI.WinForms.SiticoneCheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneGradientPanel1.SuspendLayout();
             this.stabControlbtn1.SuspendLayout();
             this.tpageConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spbProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -73,6 +76,7 @@
             // siticoneGradientPanel1
             // 
             this.siticoneGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneGradientPanel1.Controls.Add(this.pictureBox1);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMinimizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMaximizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnCerrar);
@@ -133,7 +137,7 @@
             // 
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(12, 14);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(65, 12);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
             this.siticoneHtmlLabel5.Size = new System.Drawing.Size(269, 31);
             this.siticoneHtmlLabel5.TabIndex = 1;
@@ -215,6 +219,7 @@
             this.sbtnImprimir.TabIndex = 6;
             this.sbtnImprimir.Text = "Imprimir";
             this.sbtnImprimir.UseWaitCursor = true;
+            this.sbtnImprimir.Click += new System.EventHandler(this.sbtnImprimir_Click);
             // 
             // stxtBuscar
             // 
@@ -277,9 +282,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.spbProducto);
             this.tabPage2.Controls.Add(this.schkDisponible);
-            this.tabPage2.Controls.Add(this.sbtnNuevo);
-            this.tabPage2.Controls.Add(this.siticoneButton4);
+            this.tabPage2.Controls.Add(this.sbtnSeleccionar);
             this.tabPage2.Controls.Add(this.sbtnEditar);
             this.tabPage2.Controls.Add(this.sbtnGuardar);
             this.tabPage2.Controls.Add(this.siticoneHtmlLabel4);
@@ -299,40 +304,54 @@
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.UseWaitCursor = true;
             // 
-            // sbtnNuevo
+            // spbProducto
             // 
-            this.sbtnNuevo.BorderRadius = 20;
-            this.sbtnNuevo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.sbtnNuevo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.sbtnNuevo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.sbtnNuevo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.sbtnNuevo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
-            this.sbtnNuevo.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbtnNuevo.ForeColor = System.Drawing.Color.Black;
-            this.sbtnNuevo.Location = new System.Drawing.Point(576, 102);
-            this.sbtnNuevo.Name = "sbtnNuevo";
-            this.sbtnNuevo.Size = new System.Drawing.Size(157, 42);
-            this.sbtnNuevo.TabIndex = 7;
-            this.sbtnNuevo.Text = "Nuevo";
-            this.sbtnNuevo.UseWaitCursor = true;
-            this.sbtnNuevo.Click += new System.EventHandler(this.sbtnNuevo_Click);
+            this.spbProducto.BackColor = System.Drawing.Color.Transparent;
+            this.spbProducto.FillColor = System.Drawing.Color.DimGray;
+            this.spbProducto.ImageRotate = 0F;
+            this.spbProducto.Location = new System.Drawing.Point(292, 256);
+            this.spbProducto.Name = "spbProducto";
+            this.spbProducto.Size = new System.Drawing.Size(156, 138);
+            this.spbProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spbProducto.TabIndex = 9;
+            this.spbProducto.TabStop = false;
+            this.spbProducto.UseWaitCursor = true;
             // 
-            // siticoneButton4
+            // schkDisponible
             // 
-            this.siticoneButton4.BorderRadius = 20;
-            this.siticoneButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
-            this.siticoneButton4.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneButton4.ForeColor = System.Drawing.Color.Black;
-            this.siticoneButton4.Location = new System.Drawing.Point(739, 102);
-            this.siticoneButton4.Name = "siticoneButton4";
-            this.siticoneButton4.Size = new System.Drawing.Size(157, 42);
-            this.siticoneButton4.TabIndex = 7;
-            this.siticoneButton4.Text = "Cancelar";
-            this.siticoneButton4.UseWaitCursor = true;
+            this.schkDisponible.AutoSize = true;
+            this.schkDisponible.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.schkDisponible.CheckedState.BorderRadius = 0;
+            this.schkDisponible.CheckedState.BorderThickness = 0;
+            this.schkDisponible.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.schkDisponible.Location = new System.Drawing.Point(156, 267);
+            this.schkDisponible.Name = "schkDisponible";
+            this.schkDisponible.Size = new System.Drawing.Size(134, 26);
+            this.schkDisponible.TabIndex = 8;
+            this.schkDisponible.Text = "Disponibilidad";
+            this.schkDisponible.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.schkDisponible.UncheckedState.BorderRadius = 0;
+            this.schkDisponible.UncheckedState.BorderThickness = 0;
+            this.schkDisponible.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.schkDisponible.UseWaitCursor = true;
+            // 
+            // sbtnSeleccionar
+            // 
+            this.sbtnSeleccionar.BorderRadius = 20;
+            this.sbtnSeleccionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.sbtnSeleccionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.sbtnSeleccionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.sbtnSeleccionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.sbtnSeleccionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
+            this.sbtnSeleccionar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbtnSeleccionar.ForeColor = System.Drawing.Color.Black;
+            this.sbtnSeleccionar.Location = new System.Drawing.Point(613, 144);
+            this.sbtnSeleccionar.Name = "sbtnSeleccionar";
+            this.sbtnSeleccionar.Size = new System.Drawing.Size(320, 42);
+            this.sbtnSeleccionar.TabIndex = 7;
+            this.sbtnSeleccionar.Text = "Seleccionar Imagen";
+            this.sbtnSeleccionar.UseWaitCursor = true;
+            this.sbtnSeleccionar.Click += new System.EventHandler(this.sbtnSeleccionar_Click);
             // 
             // sbtnEditar
             // 
@@ -344,7 +363,7 @@
             this.sbtnEditar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.sbtnEditar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbtnEditar.ForeColor = System.Drawing.Color.Black;
-            this.sbtnEditar.Location = new System.Drawing.Point(739, 54);
+            this.sbtnEditar.Location = new System.Drawing.Point(776, 93);
             this.sbtnEditar.Name = "sbtnEditar";
             this.sbtnEditar.Size = new System.Drawing.Size(157, 42);
             this.sbtnEditar.TabIndex = 7;
@@ -362,7 +381,7 @@
             this.sbtnGuardar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.sbtnGuardar.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbtnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.sbtnGuardar.Location = new System.Drawing.Point(576, 54);
+            this.sbtnGuardar.Location = new System.Drawing.Point(613, 93);
             this.sbtnGuardar.Name = "sbtnGuardar";
             this.sbtnGuardar.Size = new System.Drawing.Size(157, 42);
             this.sbtnGuardar.TabIndex = 7;
@@ -510,22 +529,15 @@
             this.stxtNombre.TabIndex = 0;
             this.stxtNombre.UseWaitCursor = true;
             // 
-            // schkDisponible
+            // pictureBox1
             // 
-            this.schkDisponible.AutoSize = true;
-            this.schkDisponible.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.schkDisponible.CheckedState.BorderRadius = 0;
-            this.schkDisponible.CheckedState.BorderThickness = 0;
-            this.schkDisponible.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.schkDisponible.Location = new System.Drawing.Point(156, 256);
-            this.schkDisponible.Name = "schkDisponible";
-            this.schkDisponible.Size = new System.Drawing.Size(134, 26);
-            this.schkDisponible.TabIndex = 8;
-            this.schkDisponible.Text = "Disponibilidad";
-            this.schkDisponible.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.schkDisponible.UncheckedState.BorderRadius = 0;
-            this.schkDisponible.UncheckedState.BorderThickness = 0;
-            this.schkDisponible.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // frmInventario
             // 
@@ -545,6 +557,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spbProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -565,8 +579,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnEliminar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnBuscar;
         private System.Windows.Forms.TabPage tabPage2;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnNuevo;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton4;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnSeleccionar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnEditar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnGuardar;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel4;
@@ -578,5 +591,7 @@
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtDescripcion;
         private Siticone.Desktop.UI.WinForms.SiticoneTextBox stxtNombre;
         private Siticone.Desktop.UI.WinForms.SiticoneCheckBox schkDisponible;
+        private Siticone.Desktop.UI.WinForms.SiticonePictureBox spbProducto;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

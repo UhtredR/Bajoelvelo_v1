@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,7 +42,7 @@ namespace Bajoelvelo_v1.Clases_Func
         public DataTable ObtenerTodosLosProductos(SqlConnection connection)
         {
             
-            string query = "SELECT ID_Producto, Nombre, Descripcion, Precio_unitario, Stock, Disponible FROM Producto";
+            string query = "SELECT ID_Producto, Nombre, Descripcion, Precio_unitario, Stock, Disponible, Imagen FROM Producto";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             using (SqlDataAdapter dataAdapter = new SqlDataAdapter(command))
@@ -54,9 +55,10 @@ namespace Bajoelvelo_v1.Clases_Func
             }
         }
 
-        public bool GuardarProducto(SqlConnection connection, string nombre, string descripcion, decimal precioUnitario, int stock, bool disponible)
+        public bool GuardarProducto(SqlConnection connection, string nombre, string descripcion, decimal precioUnitario, int stock, bool disponible, byte[] imagen)
         {
-            string query = "INSERT INTO Producto (Nombre, Descripcion, Precio_unitario, Stock, Disponible) VALUES (@Nombre, @Descripcion, @Precio_unitario, @Stock, @Disponible)";
+            string query = "INSERT INTO Producto (Nombre, Descripcion, Precio_unitario, Stock, Disponible, Imagen) " +
+                           "VALUES (@Nombre, @Descripcion, @Precio_unitario, @Stock, @Disponible, @Imagen)";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -65,21 +67,18 @@ namespace Bajoelvelo_v1.Clases_Func
                 command.Parameters.AddWithValue("@Precio_unitario", precioUnitario);
                 command.Parameters.AddWithValue("@Stock", stock);
                 command.Parameters.AddWithValue("@Disponible", disponible);
+                command.Parameters.AddWithValue("@Imagen", (object)imagen ?? DBNull.Value); 
 
                 try
                 {
                     connection.Open();
-
                     int filasAfectadas = command.ExecuteNonQuery();
-
                     return filasAfectadas > 0;
                 }
                 catch (Exception ex)
                 {
-
                     MessageBox.Show("Error al guardar el producto: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
-
                 }
                 finally
                 {
@@ -88,10 +87,12 @@ namespace Bajoelvelo_v1.Clases_Func
             }
         }
 
-        public bool EditarProducto(SqlConnection connection, int idProducto, string nombre, string descripcion, decimal precio, int stock, bool disponible)
+
+        public bool EditarProducto(SqlConnection connection, int idProducto, string nombre, string descripcion, decimal precio, int stock, bool disponible, byte[] imagenBytes)
         {
-            string query = "UPDATE Producto SET Nombre = @Nombre, Descripcion = @Descripcion, Precio_unitario = @Precio, Stock = @Stock, Disponible = @Disponible " +
-                           "WHERE ID_Producto = @ID_Producto";
+            string query = "UPDATE Producto SET Nombre = @Nombre, Descripcion = @Descripcion, Precio_unitario = @Precio, Stock = @Stock, Disponible = @Disponible" +
+               (imagenBytes != null ? ", Imagen = @Imagen" : "") +
+               " WHERE ID_Producto = @ID_Producto";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -101,6 +102,12 @@ namespace Bajoelvelo_v1.Clases_Func
                 command.Parameters.AddWithValue("@Precio", precio);
                 command.Parameters.AddWithValue("@Stock", stock);
                 command.Parameters.AddWithValue("@Disponible", disponible);
+
+               
+                if (imagenBytes != null)
+                {
+                    command.Parameters.AddWithValue("@Imagen", imagenBytes);
+                }
 
                 try
                 {
@@ -118,6 +125,21 @@ namespace Bajoelvelo_v1.Clases_Func
                     connection.Close();
                 }
             }
+        }
+
+       public byte[] ConvertirImagen(string rutaImagen)
+        {
+
+            if (rutaImagen == null) return null;
+
+            using (FileStream fs = new FileStream(rutaImagen, FileMode.Open, FileAccess.Read))
+            {
+                using (BinaryReader br = new BinaryReader(fs))
+                {
+                    return br.ReadBytes((int)fs.Length);
+                }
+            }
+
         }
 
     }

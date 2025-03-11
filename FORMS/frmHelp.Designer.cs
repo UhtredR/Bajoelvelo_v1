@@ -36,7 +36,9 @@
             this.sBtnMaximizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sBtnCerrar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneHtmlLabel5 = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -47,16 +49,16 @@
             // 
             // siticoneGradientPanel1
             // 
+            this.siticoneGradientPanel1.Controls.Add(this.pictureBox1);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMinimizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnMaximizar);
             this.siticoneGradientPanel1.Controls.Add(this.sBtnCerrar);
             this.siticoneGradientPanel1.Controls.Add(this.siticoneHtmlLabel5);
             this.siticoneGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(208)))), ((int)(((byte)(193)))));
             this.siticoneGradientPanel1.FillColor2 = System.Drawing.Color.White;
-            this.siticoneGradientPanel1.Location = new System.Drawing.Point(-4, 0);
-            this.siticoneGradientPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.siticoneGradientPanel1.Location = new System.Drawing.Point(-2, 0);
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
-            this.siticoneGradientPanel1.Size = new System.Drawing.Size(1924, 112);
+            this.siticoneGradientPanel1.Size = new System.Drawing.Size(962, 58);
             this.siticoneGradientPanel1.TabIndex = 1;
             // 
             // sBtnMinimizar
@@ -69,10 +71,9 @@
             this.sBtnMinimizar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sBtnMinimizar.ForeColor = System.Drawing.Color.White;
             this.sBtnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("sBtnMinimizar.Image")));
-            this.sBtnMinimizar.Location = new System.Drawing.Point(1668, 0);
-            this.sBtnMinimizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.sBtnMinimizar.Location = new System.Drawing.Point(834, 0);
             this.sBtnMinimizar.Name = "sBtnMinimizar";
-            this.sBtnMinimizar.Size = new System.Drawing.Size(86, 40);
+            this.sBtnMinimizar.Size = new System.Drawing.Size(43, 21);
             this.sBtnMinimizar.TabIndex = 3;
             // 
             // sBtnMaximizar
@@ -85,10 +86,9 @@
             this.sBtnMaximizar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sBtnMaximizar.ForeColor = System.Drawing.Color.White;
             this.sBtnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("sBtnMaximizar.Image")));
-            this.sBtnMaximizar.Location = new System.Drawing.Point(1746, 0);
-            this.sBtnMaximizar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.sBtnMaximizar.Location = new System.Drawing.Point(873, 0);
             this.sBtnMaximizar.Name = "sBtnMaximizar";
-            this.sBtnMaximizar.Size = new System.Drawing.Size(86, 40);
+            this.sBtnMaximizar.Size = new System.Drawing.Size(43, 21);
             this.sBtnMaximizar.TabIndex = 4;
             // 
             // sBtnCerrar
@@ -101,10 +101,9 @@
             this.sBtnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sBtnCerrar.ForeColor = System.Drawing.Color.White;
             this.sBtnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("sBtnCerrar.Image")));
-            this.sBtnCerrar.Location = new System.Drawing.Point(1832, 0);
-            this.sBtnCerrar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.sBtnCerrar.Location = new System.Drawing.Point(916, 0);
             this.sBtnCerrar.Name = "sBtnCerrar";
-            this.sBtnCerrar.Size = new System.Drawing.Size(86, 40);
+            this.sBtnCerrar.Size = new System.Drawing.Size(43, 21);
             this.sBtnCerrar.TabIndex = 5;
             this.sBtnCerrar.Click += new System.EventHandler(this.sBtnCerrar_Click);
             // 
@@ -112,25 +111,35 @@
             // 
             this.siticoneHtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.siticoneHtmlLabel5.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(24, 27);
-            this.siticoneHtmlLabel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.siticoneHtmlLabel5.Location = new System.Drawing.Point(66, 8);
             this.siticoneHtmlLabel5.Name = "siticoneHtmlLabel5";
-            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(158, 69);
+            this.siticoneHtmlLabel5.Size = new System.Drawing.Size(81, 37);
             this.siticoneHtmlLabel5.TabIndex = 1;
             this.siticoneHtmlLabel5.Text = "Ayuda";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(10, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmHelp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1914, 871);
+            this.ClientSize = new System.Drawing.Size(957, 453);
             this.Controls.Add(this.siticoneGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "frmHelp";
             this.Text = "frmHelp";
             this.siticoneGradientPanel1.ResumeLayout(false);
             this.siticoneGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -143,5 +152,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton sBtnMaximizar;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sBtnCerrar;
         private Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel siticoneHtmlLabel5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
