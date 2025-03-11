@@ -42,8 +42,7 @@ namespace Bajoelvelo_v1
         }
         private void frmCatalogo_Load(object sender, EventArgs e)
         {
-            CargaFlowLayout CargaFlowLayout = new CargaFlowLayout();
-            CargaFlowLayout.CargarProductosFL(flProductos, cnx);
+            
         }
 
         private void CargarFlTabControl()
@@ -53,17 +52,24 @@ namespace Bajoelvelo_v1
             TabPage tabPage = stabControlbtn1.TabPages[0];
 
             if (!tabPage.Controls.Contains(flProductos))
-            { 
+            {
+                flProductos = new FlowLayoutPanel();
+                flProductos.Dock = DockStyle.Fill;
+                flProductos.AutoScroll = true;
+                flProductos.FlowDirection = FlowDirection.LeftToRight; // Organiza en filas
+                flProductos.WrapContents = true; // Permite ajuste automático
+                flProductos.Padding = new Padding(10);
+                flProductos.Margin = new Padding(5);
+
                 tabPage.Controls.Add(flProductos);
             }
 
-            flProductos.Dock = DockStyle.Fill;
-            flProductos.AutoScroll = true;
+            // Llevarlo al frente para evitar que quede oculto
             flProductos.BringToFront();
 
-            CargaFlowLayout CargaFlowLayout = new CargaFlowLayout();
-            CargaFlowLayout.CargarProductosFL(flProductos, cnx);
-
+            // Cargar los productos en el FlowLayoutPanel
+            CargaFlowLayout cargaFL = new CargaFlowLayout();
+            cargaFL.CargarProductosFL(flProductos, cnx);
 
         }
 
@@ -115,9 +121,7 @@ namespace Bajoelvelo_v1
             dgvDetalleFactura.Columns.Add(colEliminar);
 
             // Configurar NumericUpDown
-            nudCantidad.Minimum = 1;
-            nudCantidad.Maximum = 10;
-            nudCantidad.Value = 1;
+
         }
 
         private void CargarDatos()
@@ -210,7 +214,7 @@ namespace Bajoelvelo_v1
 
                 int idProducto = Convert.ToInt32(scmbProducto.SelectedValue);
                 string nombreProducto = scmbProducto.Text;
-                int cantidad = Convert.ToInt32(nudCantidad.Value);
+                
 
                 // Obtener el precio y stock del producto seleccionado
                 DataRow[] filas = _dtProductos.Select($"ID_Producto = {idProducto}");
@@ -223,7 +227,7 @@ namespace Bajoelvelo_v1
                 decimal precioUnitario = Convert.ToDecimal(filas[0]["Precio_unitario"]);
                 int stockDisponible = Convert.ToInt32(filas[0]["Stock"]);
 
-                bool resultado = _factura.AgregarProducto(idProducto, nombreProducto, cantidad, precioUnitario, stockDisponible);
+                
 
                 if (!resultado)
                 {
@@ -237,7 +241,7 @@ namespace Bajoelvelo_v1
 
                 // Limpiar selección
                 scmbProducto.SelectedIndex = -1;
-                nudCantidad.Value = 1;
+                
             }
             catch (Exception ex)
             {

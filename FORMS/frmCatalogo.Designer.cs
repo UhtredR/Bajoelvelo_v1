@@ -29,12 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage1 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatalogo));
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage2 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage3 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage4 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
-            Syncfusion.Windows.Forms.Tools.CarouselImage carouselImage5 = new Syncfusion.Windows.Forms.Tools.CarouselImage();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,8 +40,6 @@
             this.stabControlbtn1 = new Siticone.Desktop.UI.WinForms.SiticoneTabControl();
             this.tpageCatalogo = new System.Windows.Forms.TabPage();
             this.siticonePanel6 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
-            this.carousel = new Syncfusion.Windows.Forms.Tools.Carousel();
-            this.flProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.siticonePanel1 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.siticonePanel7 = new Siticone.Desktop.UI.WinForms.SiticonePanel();
@@ -55,7 +48,6 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblItbis = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.nudCantidad = new Syncfusion.Windows.Forms.Tools.NumericUpDownExt();
             this.dgvDetalleFactura = new System.Windows.Forms.DataGridView();
             this.sbtnCancelar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sbtnGuardarFactura = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -67,6 +59,7 @@
             this.scmbCliente = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.flProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.siticoneGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.stabControlbtn1.SuspendLayout();
@@ -76,7 +69,7 @@
             this.siticonePanel1.SuspendLayout();
             this.siticonePanel7.SuspendLayout();
             this.siticonePanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,55 +207,13 @@
             // 
             // siticonePanel6
             // 
-            this.siticonePanel6.Controls.Add(this.carousel);
             this.siticonePanel6.Controls.Add(this.flProductos);
-            this.siticonePanel6.Location = new System.Drawing.Point(3, 14);
+            this.siticonePanel6.Location = new System.Drawing.Point(3, 5);
             this.siticonePanel6.Name = "siticonePanel6";
             this.siticonePanel6.Size = new System.Drawing.Size(938, 814);
             this.siticonePanel6.TabIndex = 0;
             this.siticonePanel6.UseWaitCursor = true;
             this.siticonePanel6.Paint += new System.Windows.Forms.PaintEventHandler(this.siticonePanel6_Paint);
-            // 
-            // carousel
-            // 
-            this.carousel.HighlightColor = System.Drawing.Color.Transparent;
-            carouselImage1.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage1.ItemImage")));
-            carouselImage2.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage2.ItemImage")));
-            carouselImage3.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage3.ItemImage")));
-            carouselImage4.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage4.ItemImage")));
-            carouselImage5.ItemImage = ((System.Drawing.Image)(resources.GetObject("carouselImage5.ItemImage")));
-            this.carousel.ImageListCollection.Add(carouselImage1);
-            this.carousel.ImageListCollection.Add(carouselImage2);
-            this.carousel.ImageListCollection.Add(carouselImage3);
-            this.carousel.ImageListCollection.Add(carouselImage4);
-            this.carousel.ImageListCollection.Add(carouselImage5);
-            this.carousel.ImageshadeColor = System.Drawing.Color.Transparent;
-            this.carousel.ImageSlides = true;
-            this.carousel.Location = new System.Drawing.Point(122, 13);
-            this.carousel.Name = "carousel";
-            this.carousel.PadX = 0;
-            this.carousel.PadY = 0;
-            this.carousel.Perspective = 4F;
-            this.carousel.RotateAlways = false;
-            this.carousel.ShowImagePreview = false;
-            this.carousel.ShowImageShadow = false;
-            this.carousel.Size = new System.Drawing.Size(697, 195);
-            this.carousel.TabIndex = 56;
-            this.carousel.Text = "carousel1";
-            this.carousel.ThemeName = "Metro";
-            this.carousel.TouchTransitionSpeed = 1F;
-            this.carousel.UseOriginalImageinPreview = false;
-            this.carousel.UseWaitCursor = true;
-            this.carousel.VisualStyle = Syncfusion.Windows.Forms.Tools.CarouselVisualStyle.Metro;
-            // 
-            // flProductos
-            // 
-            this.flProductos.AutoScroll = true;
-            this.flProductos.Location = new System.Drawing.Point(122, 238);
-            this.flProductos.Name = "flProductos";
-            this.flProductos.Size = new System.Drawing.Size(697, 498);
-            this.flProductos.TabIndex = 57;
-            this.flProductos.UseWaitCursor = true;
             // 
             // tabPage2
             // 
@@ -315,7 +266,7 @@
             this.siticonePanel3.Controls.Add(this.lblTotal);
             this.siticonePanel3.Controls.Add(this.lblItbis);
             this.siticonePanel3.Controls.Add(this.lblSubtotal);
-            this.siticonePanel3.Controls.Add(this.nudCantidad);
+            this.siticonePanel3.Controls.Add(this);
             this.siticonePanel3.Controls.Add(this.dgvDetalleFactura);
             this.siticonePanel3.Controls.Add(this.sbtnCancelar);
             this.siticonePanel3.Controls.Add(this.sbtnGuardarFactura);
@@ -365,12 +316,12 @@
             // 
             // nudCantidad
             // 
-            this.nudCantidad.BeforeTouchSize = new System.Drawing.Size(58, 26);
-            this.nudCantidad.Location = new System.Drawing.Point(502, 111);
-            this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(58, 26);
-            this.nudCantidad.TabIndex = 13;
-            this.nudCantidad.UseWaitCursor = true;
+            
+            this.Location = new System.Drawing.Point(502, 111);
+            this.Name = "nudCantidad";
+            this.Size = new System.Drawing.Size(58, 26);
+            this.TabIndex = 13;
+            this.UseWaitCursor = true;
             // 
             // dgvDetalleFactura
             // 
@@ -522,6 +473,15 @@
             this.label6.Text = "Cliente";
             this.label6.UseWaitCursor = true;
             // 
+            // flProductos
+            // 
+            this.flProductos.AutoScroll = true;
+            this.flProductos.Location = new System.Drawing.Point(124, 53);
+            this.flProductos.Name = "flProductos";
+            this.flProductos.Size = new System.Drawing.Size(697, 370);
+            this.flProductos.TabIndex = 57;
+            this.flProductos.UseWaitCursor = true;
+            // 
             // frmCatalogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,7 +506,7 @@
             this.siticonePanel7.PerformLayout();
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleFactura)).EndInit();
             this.ResumeLayout(false);
 
@@ -573,11 +533,9 @@
         private System.Windows.Forms.DataGridView dgvDetalleFactura;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnAgregarProducto;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel6;
-        private Syncfusion.Windows.Forms.Tools.Carousel carousel;
         private Siticone.Desktop.UI.WinForms.SiticonePanel siticonePanel7;
         private System.Windows.Forms.Label label12;
         private Siticone.Desktop.UI.WinForms.SiticoneComboBox scmbProducto;
-        private Syncfusion.Windows.Forms.Tools.NumericUpDownExt nudCantidad;
         private System.Windows.Forms.Label label1;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnGuardarFactura;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnCancelar;

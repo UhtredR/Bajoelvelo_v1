@@ -1,5 +1,4 @@
-﻿using Syncfusion.Windows.Forms.Tools;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -19,6 +18,7 @@ namespace Bajoelvelo_v1.Clases_Func
         CargaDG_INV CargaDG_INV = new CargaDG_INV();
         public void CargarProductosFL( FlowLayoutPanel flowLayoutPanel, SqlConnection connection)
         {
+
             DataTable dtProductos = CargaDG_INV.ObtenerTodosLosProductos(connection);
             
             foreach( DataRow Fila in dtProductos.Rows )
