@@ -7,24 +7,22 @@ Bajo el Velo es una plataforma digital enfocada en el alquiler de artículos nup
 
 📌 Descripción del Proyecto
 
-El proyecto consiste en el desarrollo de una aplicación que facilite el alquiler de artículos esenciales para bodas. La plataforma ofrecerá un catálogo virtual donde los clientes podrán:
+El proyecto consiste en el desarrollo de una aplicación que facilite el alquiler de artículos esenciales para bodas. La plataforma ofrecerá un catálogo virtual podrán:
 Explorar productos como vestidos de novia, trajes, accesorios y decoraciones.
-Realizar reservas en línea de manera fácil y rápida.
 Gestionar sus alquileres directamente desde sus dispositivos.
 
 
 
 🎯 Objetivo
 
-El objetivo principal de Bajo el Velo es mejorar el acceso a productos nupciales mediante una herramienta tecnológica intuitiva. La plataforma optimiza los procesos administrativos de las casas de novias y mejora la experiencia del cliente.
+El objetivo principal de Bajo el Velo es mejorar el acceso a productos nupciales mediante una herramienta tecnológica intuitiva. La plataforma optimiza los procesos administrativos de las casas de novias y mejora la experiencia de manejo de clientes y demas.
 
 
 🚀 Importancia del Sistema
 
 Este sistema es crucial por las siguientes razones:
-Experiencia del Cliente: Permite a los usuarios alquilar artículos de forma rápida y sin complicaciones.
+Experiencia del Administrador: Permite a los usuarios alquilar artículos de forma rápida y sin complicaciones.
 Optimización Administrativa: Digitaliza la gestión de alquileres, reduciendo errores y mejorando la organización.
-Mayor Alcance: Las casas de novias pueden llegar a más clientes sin depender únicamente de su ubicación física.
 Reducción de Costos: Disminuye la necesidad de procesos manuales y mejora la eficiencia operativa.
 
 🔧 Tecnologías Utilizadas
@@ -36,7 +34,7 @@ Cloud Storage: Google Cloud (para migración y almacenamiento de datos)
 Funcionalidades Clave:
 
 Gestión de clientes y productos
-Administración de facturas y alquileres
+Administración de facturas con registro de alquileres
 Exportación de datos a Excel
 Diseño moderno e intuitivo
 
@@ -61,4 +59,5 @@ Configura la conexión a la base de datos en appsettings.json o en la clase de c
 Configura la integración con Google Cloud para el almacenamiento de datos.
 Ejecuta la aplicación y comienza a gestionar alquileres.
 
-NOTA: Este proyecto fue creados a fines educativos
+NOTA: Este proyecto fue creados a fines educativos.
+Hay funciones que aun estan por terminar.
