@@ -345,5 +345,12 @@ namespace Bajoelvelo_v1.FORMS.SERV_FORMS
                 MessageBox.Show("No hay datos para exportar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void sBtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmServices frmServices = new frmServices();
+            frmServices.Show();
+        }
     }
 }

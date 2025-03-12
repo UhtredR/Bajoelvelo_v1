@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneGradientPanel1 = new Siticone.Desktop.UI.WinForms.SiticoneGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sBtnMinimizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sBtnMaximizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sBtnCerrar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -57,14 +58,13 @@
             this.stxtPrecio = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtDescripcion = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
             this.stxtNombre = new Siticone.Desktop.UI.WinForms.SiticoneTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.siticoneGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.stabControlbtn1.SuspendLayout();
             this.tpageConsultas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spbProducto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // siticoneBorderlessForm1
@@ -87,6 +87,16 @@
             this.siticoneGradientPanel1.Name = "siticoneGradientPanel1";
             this.siticoneGradientPanel1.Size = new System.Drawing.Size(992, 54);
             this.siticoneGradientPanel1.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(9, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // sBtnMinimizar
             // 
@@ -132,6 +142,7 @@
             this.sBtnCerrar.Name = "sBtnCerrar";
             this.sBtnCerrar.Size = new System.Drawing.Size(43, 21);
             this.sBtnCerrar.TabIndex = 5;
+            this.sBtnCerrar.Click += new System.EventHandler(this.sBtnCerrar_Click);
             // 
             // siticoneHtmlLabel5
             // 
@@ -529,16 +540,6 @@
             this.stxtNombre.TabIndex = 0;
             this.stxtNombre.UseWaitCursor = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(9, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,13 +553,13 @@
             this.Load += new System.EventHandler(this.frmInventario_Load);
             this.siticoneGradientPanel1.ResumeLayout(false);
             this.siticoneGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.stabControlbtn1.ResumeLayout(false);
             this.tpageConsultas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgInventario)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spbProducto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

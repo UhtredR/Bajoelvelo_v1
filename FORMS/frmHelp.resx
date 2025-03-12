@@ -852,4 +852,20 @@
         8L949QAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="lblAyudaCliente.Text" xml:space="preserve">
+    <value>Para agregar un nuevo cliente, primero diríjase a la pantalla de inicio. En la parte superior 
+izquierda, encontrará varias opciones. Seleccione "Servicios" y, a continuación, haga clic en
+ "Clientes". Luego, acceda a la opción "Registro", complete los datos del cliente en el formulario
+ y, finalmente, haga clic en "Guardar" para almacenar la información.
+
+Para eliminar un cliente, siga los mismos pasos hasta llegar a la sección de "Clientes", 
+pero en lugar de seleccionar "Registro", elija "Consulta". Busque y seleccione el cliente que 
+desea eliminar y, luego, haga clic en "Eliminar" para confirmar la acción.</value>
+  </data>
+  <data name="lblAyudaInventario.Text" xml:space="preserve">
+    <value>Para agregar artículos al inventario, primero vaya a la pantalla de inicio. Luego, seleccione 
+la opción "Servicios", acceda a la sección "Inventario" y haga clic en "Registro". En esta 
+pantalla, ingrese los datos requeridos del artículo, seleccione la imagen desde su archivo y, 
+por último, establezca su disponibilidad antes de guardarla información.</value>
+  </data>
 </root>

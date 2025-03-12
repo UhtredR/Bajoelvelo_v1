@@ -185,5 +185,12 @@ namespace Bajoelvelo_v1.FORMS.SERV_FORMS
                 MessageBox.Show("Por favor, selecciona una celda de la factura para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void sBtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmServices frmServices = new frmServices();
+            frmServices.Show();
+        }
     }
 }

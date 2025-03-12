@@ -149,6 +149,7 @@
             this.sBtnCerrar.Name = "sBtnCerrar";
             this.sBtnCerrar.Size = new System.Drawing.Size(43, 21);
             this.sBtnCerrar.TabIndex = 5;
+            this.sBtnCerrar.Click += new System.EventHandler(this.sBtnCerrar_Click_1);
             // 
             // siticoneHtmlLabel5
             // 
@@ -209,7 +210,7 @@
             // siticonePanel6
             // 
             this.siticonePanel6.Controls.Add(this.flProductos);
-            this.siticonePanel6.Location = new System.Drawing.Point(3, 14);
+            this.siticonePanel6.Location = new System.Drawing.Point(1, 6);
             this.siticonePanel6.Name = "siticonePanel6";
             this.siticonePanel6.Size = new System.Drawing.Size(938, 814);
             this.siticonePanel6.TabIndex = 0;

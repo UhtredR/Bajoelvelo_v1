@@ -38,7 +38,6 @@
             this.sbtnAyuda = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sbtnServicios = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sbtnCatalogo = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.sbtnInicio = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.spanelTitulo = new Siticone.Desktop.UI.WinForms.SiticonePanel();
             this.sBtnMinimizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.sBtnMaximizar = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -46,6 +45,7 @@
             this.Label = new Siticone.Desktop.UI.WinForms.SiticoneHtmlLabel();
             this.siticoneBorderlessForm1 = new Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm(this.components);
             this.siticoneAnimateWindow1 = new Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow(this.components);
+            this.sbtnInicio = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.spanelMenu.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,6 +136,7 @@
             this.sbtnAyuda.Size = new System.Drawing.Size(141, 45);
             this.sbtnAyuda.TabIndex = 2;
             this.sbtnAyuda.Text = "Ayuda";
+            this.sbtnAyuda.Click += new System.EventHandler(this.sbtnAyuda_Click_1);
             // 
             // sbtnServicios
             // 
@@ -175,24 +176,6 @@
             this.sbtnCatalogo.Text = "Catalogo";
             this.sbtnCatalogo.Click += new System.EventHandler(this.sbtnCatalogo_Click);
             // 
-            // sbtnInicio
-            // 
-            this.sbtnInicio.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.sbtnInicio.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.sbtnInicio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.sbtnInicio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.sbtnInicio.FillColor = System.Drawing.Color.Transparent;
-            this.sbtnInicio.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sbtnInicio.ForeColor = System.Drawing.Color.Black;
-            this.sbtnInicio.Image = ((System.Drawing.Image)(resources.GetObject("sbtnInicio.Image")));
-            this.sbtnInicio.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.sbtnInicio.Location = new System.Drawing.Point(27, 101);
-            this.sbtnInicio.Name = "sbtnInicio";
-            this.sbtnInicio.Size = new System.Drawing.Size(141, 45);
-            this.sbtnInicio.TabIndex = 2;
-            this.sbtnInicio.Tag = "Inicio";
-            this.sbtnInicio.Text = "Inicio";
-            // 
             // spanelTitulo
             // 
             this.spanelTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -205,6 +188,7 @@
             this.spanelTitulo.Name = "spanelTitulo";
             this.spanelTitulo.Size = new System.Drawing.Size(640, 42);
             this.spanelTitulo.TabIndex = 1;
+            this.spanelTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.spanelTitulo_Paint);
             this.spanelTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.spanelTitulo_MouseDown);
             // 
             // sBtnMinimizar
@@ -276,6 +260,24 @@
             this.siticoneBorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.siticoneBorderlessForm1.TransparentWhileDrag = true;
             // 
+            // sbtnInicio
+            // 
+            this.sbtnInicio.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.sbtnInicio.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.sbtnInicio.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.sbtnInicio.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.sbtnInicio.FillColor = System.Drawing.Color.Transparent;
+            this.sbtnInicio.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbtnInicio.ForeColor = System.Drawing.Color.Black;
+            this.sbtnInicio.Image = ((System.Drawing.Image)(resources.GetObject("sbtnInicio.Image")));
+            this.sbtnInicio.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.sbtnInicio.Location = new System.Drawing.Point(27, 101);
+            this.sbtnInicio.Name = "sbtnInicio";
+            this.sbtnInicio.Size = new System.Drawing.Size(141, 45);
+            this.sbtnInicio.TabIndex = 2;
+            this.sbtnInicio.Tag = "Inicio";
+            this.sbtnInicio.Text = "Inicio";
+            // 
             // frmMainmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,7 +304,6 @@
         private Siticone.Desktop.UI.WinForms.SiticonePanel spanelMenu;
         private Siticone.Desktop.UI.WinForms.SiticonePanel spanelTitulo;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sBtnMenu;
-        private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnInicio;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnCatalogo;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnSalir;
         private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnAyuda;
@@ -315,5 +316,6 @@
         private Siticone.Desktop.UI.WinForms.SiticoneButton sBtnMaximizar;
         private Siticone.Desktop.UI.WinForms.SiticoneBorderlessForm siticoneBorderlessForm1;
         private Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow siticoneAnimateWindow1;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton sbtnInicio;
     }
 }

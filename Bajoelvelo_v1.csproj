@@ -180,12 +180,6 @@
     <Compile Include="FORMS\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORMS\frmAlmacen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORMS\frmAlmacen.Designer.cs">
-      <DependentUpon>frmAlmacen.cs</DependentUpon>
-    </Compile>
     <Compile Include="FORMS\frmCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,9 +233,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FORMS\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORMS\frmAlmacen.resx">
-      <DependentUpon>frmAlmacen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\frmCatalogo.resx">
       <DependentUpon>frmCatalogo.cs</DependentUpon>

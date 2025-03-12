@@ -103,6 +103,7 @@
             this.sBtnMinimizar.Name = "sBtnMinimizar";
             this.sBtnMinimizar.Size = new System.Drawing.Size(43, 21);
             this.sBtnMinimizar.TabIndex = 3;
+            this.sBtnMinimizar.Click += new System.EventHandler(this.sBtnMinimizar_Click);
             // 
             // sBtnMaximizar
             // 

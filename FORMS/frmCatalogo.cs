@@ -320,6 +320,13 @@ namespace Bajoelvelo_v1
         {
 
         }
+
+        private void sBtnCerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMainmenu frmMainmenu = new frmMainmenu();
+            frmMainmenu.Show();
+        }
     }
 }
 

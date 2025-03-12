@@ -72,5 +72,19 @@ namespace Bajoelvelo_v1
                 cnx.Close();
             }
         }
+
+        private void sbtnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult res;
+            res = MessageBox.Show("Deseas cerrar el programa", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                this.Show();
+            }
+        }
     }
 }

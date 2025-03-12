@@ -53,8 +53,9 @@ namespace Bajoelvelo_v1.FORMS.SERV_FORMS
 
         private void sBtnCerrar_Click(object sender, EventArgs e)
         {
-            FormFuncs formFuncs = new FormFuncs(this);
-            formFuncs.cerrarForm();
+            this.Hide();
+            frmServices frmServices = new frmServices();
+            frmServices.Show();
         }
 
         private void frmClientes_Load(object sender, EventArgs e)

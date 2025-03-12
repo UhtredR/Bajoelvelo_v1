@@ -3,20 +3,25 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ClosedXML.Excel.XLPredefinedFormat;
 
 namespace Bajoelvelo_v1
 {
     public partial class frmMainmenu : Form
     {
+        private readonly SqlConnection cnx;
+
         public frmMainmenu()
         {
             InitializeComponent();
+            cnx = Infraestructura.Conexion.Conectar();
             this.Padding = new Padding(0, 0, SystemInformation.VerticalScrollBarWidth, 0);
             this.BackColor = Color.FromArgb(240, 240, 240);
         }
@@ -33,15 +38,36 @@ namespace Bajoelvelo_v1
 
         private void sbtnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult res;
-            res = MessageBox.Show("Deseas cerrar el programa", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (res == DialogResult.Yes)
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea cerrar sesión?",
+                                           "Confirmar",
+                                           MessageBoxButtons.YesNo,
+                                           MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
             {
-                Application.Exit();
-            }
-            else
-            {
-                this.Show();
+                try
+                {
+                    
+                    if (cnx != null && cnx.State == ConnectionState.Open)
+                    {
+                        cnx.Close();
+                    }
+
+                    // Ocultar el formulario actual (menú principal)
+                    this.Hide();
+
+                    // Mostrar el formulario de inicio de sesión
+                    frmInicio frmLogin = new frmInicio(); // Asegúrate de usar el nombre correcto de tu form de login
+                    frmLogin.Show();
+
+                    // Cerrar completamente este formulario
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cerrar sesión: " + ex.Message, "Error",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -58,6 +84,7 @@ namespace Bajoelvelo_v1
 
         private void sbtnCatalogo_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmCatalogo catalogo = new frmCatalogo();
             catalogo.Show();
 
@@ -65,6 +92,7 @@ namespace Bajoelvelo_v1
 
         private void sbtnServicios_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmServices frmServices = new frmServices();
             frmServices.Show();
         }
@@ -101,6 +129,19 @@ namespace Bajoelvelo_v1
         private void sBtnMenu_Click(object sender, EventArgs e)
         {
             formFuncs = new Clases_Func.FormFuncs(this);
+        }
+
+        private void sbtnAyuda_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmHelp frmHelp = new frmHelp();
+            frmHelp.Show();
+
+        }
+
+        private void spanelTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

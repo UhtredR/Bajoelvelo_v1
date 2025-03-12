@@ -94,6 +94,7 @@
             this.sbtnSalir.Size = new System.Drawing.Size(148, 55);
             this.sbtnSalir.TabIndex = 3;
             this.sbtnSalir.Text = "Salir";
+            this.sbtnSalir.Click += new System.EventHandler(this.sbtnSalir_Click);
             // 
             // sBtnAcceder
             // 
